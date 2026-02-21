@@ -4,126 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigel Anthony Thomas | Executive Portfolio</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; margin: 0; overflow-x: hidden; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #ffffff;
+        }
+
         .gold { color: #c5a059; }
-        .gold-border { border: 1px solid #c5a059; }
-        
-        /* The "Keys" Design */
-        .key-btn { 
-            border: 1px solid rgba(197, 160, 89, 0.3); 
-            background: rgba(255, 255, 255, 0.02); 
-            padding: 15px 30px;
-            transition: all 0.4s ease;
-            text-transform: uppercase;
+
+        .key-btn {
+            border: 1px solid rgba(197,160,89,0.3);
+            padding: 14px 28px;
             letter-spacing: 0.2em;
             font-size: 0.75rem;
-            cursor: pointer;
-            display: inline-block;
-        }
-        .key-btn:hover { 
-            border-color: #c5a059; 
-            background: rgba(197, 160, 89, 0.1);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.2);
+            transition: 0.4s;
         }
 
-        /* Image Containers */
-        .img-frame { 
+        .key-btn:hover {
+            border-color: #c5a059;
+            background: rgba(197,160,89,0.1);
+        }
+
+        .img-frame {
             border: 1px solid rgba(255,255,255,0.1);
             padding: 10px;
-            transition: 0.5s;
         }
-        .img-frame:hover { border-color: #c5a059; }
-        
-        /* Animation State */
-        .reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 1s;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header class="text-center pt-24 pb-16 border-b border-gray-900">
-    <img src="profile.png" alt="Nigel Anthony Thomas" class="w-48 h-48 mx-auto rounded-full border-4 border-white object-cover mb-8 shadow-2xl">
-    <h1 class="text-6xl font-bold mb-6 tracking-tight">Nigel Anthony Thomas</h1>
-    <p class="gold tracking-[0.4em] text-sm font-light uppercase">The Architecture of Operational Maturity</p>
-    
-    <div class="mt-12">
-        <a href="resume.pdf" download class="key-btn gold">Download Executive CV</a>
+    <img src="profile.png" class="w-40 h-40 mx-auto rounded-full mb-6 border-4 border-white object-cover">
+
+    <h1 class="text-5xl font-bold">Nigel Anthony Thomas</h1>
+
+    <p class="gold mt-4 tracking-[0.3em] text-xs uppercase">
+        Hospitality Leadership | Operations Excellence | Guest Experience Strategy
+    </p>
+
+    <div class="mt-10">
+        <a href="resume.pdf" class="key-btn gold">Download CV</a>
     </div>
 </header>
 
+
+<!-- MAIN -->
 <main class="max-w-6xl mx-auto px-6 py-20">
-    
-    <section class="mb-32 reveal">
-        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Artist & Recognition</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="img-frame">
-                <img src="artist.jpg" alt="Artist Profile" class="w-full h-96 object-cover mb-4">
-                <p class="gold text-center uppercase text-xs tracking-widest">Artist Profile</p>
-            </div>
-            <div class="img-frame">
-                <img src="award.jpg" alt="Awards and Recognition" class="w-full h-96 object-cover mb-4">
-                <p class="gold text-center uppercase text-xs tracking-widest">Global Awards</p>
-            </div>
-        </div>
-    </section>
 
-    <section class="mb-32 reveal">
-        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Operational Footprint</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="img-frame">
-                <img src="land1.jpg" alt="Land Operations" class="w-full h-80 object-cover mb-4">
-                <p class="gold text-center uppercase text-xs tracking-widest">Land Operations</p>
-            </div>
-            <div class="img-frame">
-                <img src="sea1.jpg" alt="Sea Operations" class="w-full h-80 object-cover mb-4">
-                <p class="gold text-center uppercase text-xs tracking-widest">Maritime Excellence</p>
-            </div>
-        </div>
-    </section>
+<!-- BIO SECTION -->
+<section class="mb-28 text-center reveal">
+    <h2 class="gold text-xs tracking-[0.4em] uppercase mb-8">Executive Profile</h2>
 
-    <section class="mb-32 text-center reveal">
-        <h2 class="gold text-xs tracking-[0.4em] uppercase mb-12">Portfolio Keys</h2>
-        <div class="flex flex-wrap justify-center gap-6">
-            <a href="https://wa.me/YOUR_NUMBER" class="key-btn">WhatsApp</a>
-            <a href="mailto:your_email@gmail.com" class="key-btn">Email</a>
-            <a href="YOUR_LINKEDIN" class="key-btn">LinkedIn</a>
-            <a href="YOUR_VIDEO_URL" class="key-btn">Video Bio</a>
-        </div>
-    </section>
+    <p class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
+        Seasoned hospitality professional with extensive experience across luxury hotels,
+        resorts, and cruise operations. Proven track record in managing multi-department
+        operations including Front Office, Housekeeping, Food & Beverage, and Guest Relations.
 
-    <section class="mb-32 border-t border-white/5 pt-20 text-center reveal">
-        <h2 class="gold text-xs tracking-[0.4em] uppercase mb-12">Joblynk Subdomain</h2>
-        <div class="flex flex-wrap justify-center gap-6">
-            <a href="https://joblynk.nigelthomas.live" class="key-btn">Joblynk Platform</a>
-            <a href="YOUR_SUPPORT_LINK" class="key-btn">Joblynk Support</a>
+        Known for driving operational efficiency, enhancing guest satisfaction, and building
+        high-performance teams. Combines traditional hospitality excellence with modern tools
+        including AI-assisted workflows, digital branding, and content-driven engagement.
+
+        Leadership approach is grounded in discipline, consistency, and elevated service standards
+        aligned with international hospitality benchmarks.
+    </p>
+</section>
+
+
+<!-- LAND & SEA -->
+<section class="mb-28 reveal">
+    <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">
+        Operational Footprint
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-10">
+        <div class="img-frame">
+            <img src="land1.jpg" class="w-full h-80 object-cover">
+            <p class="text-center gold mt-3 text-xs uppercase tracking-widest">Land Operations</p>
         </div>
-    </section>
+
+        <div class="img-frame">
+            <img src="sea1.jpg" class="w-full h-80 object-cover">
+            <p class="text-center gold mt-3 text-xs uppercase tracking-widest">Maritime Operations</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- CERTIFICATIONS / ACHIEVEMENTS -->
+<section class="mb-28 reveal">
+    <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">
+        Certifications & Recognition
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+        <div class="img-frame"><img src="cert1.png"></div>
+        <div class="img-frame"><img src="cert2.png"></div>
+        <div class="img-frame"><img src="cert3.png"></div>
+        <div class="img-frame"><img src="cert4.png"></div>
+        <div class="img-frame"><img src="cert5.png"></div>
+        <div class="img-frame"><img src="cert6.png"></div>
+    </div>
+</section>
+
+
+<!-- CONTACT KEYS -->
+<section class="text-center mb-28 reveal">
+    <h2 class="gold text-xs tracking-[0.4em] uppercase mb-10">Connect</h2>
+
+    <div class="flex flex-wrap justify-center gap-5">
+        <a href="https://wa.me/919769351231" class="key-btn">WhatsApp</a>
+        <a href="mailto:restgenmgr1952@gmail.com" class="key-btn">Email</a>
+        <a href="https://www.linkedin.com/in/nathomas" class="key-btn">LinkedIn</a>
+    </div>
+</section>
+
+
+<!-- JOBLYNK -->
+<section class="text-center reveal">
+    <h2 class="gold text-xs tracking-[0.4em] uppercase mb-10">Platform</h2>
+
+    <a href="https://joblynk.live" class="key-btn">
+        Visit Joblynk.live
+    </a>
+</section>
 
 </main>
 
-<footer class="text-center pb-20 text-gray-600 text-xs tracking-widest uppercase">
-    &copy; 2026 Nigel Anthony Thomas. All Rights Reserved.
+
+<!-- FOOTER -->
+<footer class="text-center py-12 text-gray-600 text-xs">
+    © 2026 Nigel Anthony Thomas
 </footer>
 
+
+<!-- SCROLL ANIMATION -->
 <script>
-    window.addEventListener('scroll', reveal);
-    function reveal() {
-        var reveals = document.querySelectorAll('.reveal');
-        for (var i = 0; i < reveals.length; i++) {
-            var windowHeight = window.innerHeight;
-            var revealTop = reveals[i].getBoundingClientRect().top;
-            var revealPoint = 150;
-            if (revealTop < windowHeight - revealPoint) {
-                reveals[i].classList.add('active');
-            }
+window.addEventListener('scroll', function() {
+    const reveals = document.querySelectorAll('.reveal');
+
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const revealTop = el.getBoundingClientRect().top;
+
+        if (revealTop < windowHeight - 120) {
+            el.classList.add('active');
         }
-    }
-    // Initial check on load
-    reveal();
+    });
+});
 </script>
 
 </body>
