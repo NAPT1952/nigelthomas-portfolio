@@ -9,10 +9,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; margin: 0; overflow-x: hidden; }
         .gold { color: #c5a059; }
-        .key-btn { border: 1px solid rgba(197, 160, 89, 0.6); background: rgba(197, 160, 89, 0.05); padding: 14px 10px; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.65rem; cursor: pointer; display: inline-block; width: 100%; text-align: center; font-weight: 600; text-decoration: none; color: white; }
-        .key-btn:hover { background: #c5a059; color: #000; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3); }
+        /* Adjusted key-btn for static text visibility */
+        .key-btn { border: 1px solid rgba(197, 160, 89, 0.6); background: rgba(197, 160, 89, 0.05); padding: 12px 8px; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.6rem; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; font-weight: 600; text-decoration: none; color: white; min-height: 60px; }
+        .key-btn:hover { background: #c5a059; color: #000; transform: translateY(-3px); }
+        .key-val { font-size: 0.75rem; color: #c5a059; margin-top: 4px; text-transform: none; letter-spacing: 0; }
+        .key-btn:hover .key-val { color: #000; }
         .img-frame { border: 1px solid rgba(197, 160, 89, 0.3); padding: 12px; background: rgba(255,255,255,0.02); }
-        .cert-card { border: 1px solid rgba(255,255,255,0.1); width: 100%; height: auto; }
+        .cert-card { border: 1px solid rgba(255,255,255,0.1); width: 100%; height: auto; transition: 0.3s; }
         .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
@@ -25,58 +28,46 @@
     <p class="gold tracking-[0.4em] text-xs font-light uppercase mb-12">The Architecture of Operational Maturity</p>
     
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 max-w-7xl mx-auto px-4">
-        <a href="tel:+919769351231" class="key-btn">Call Cell</a>
-        <a href="https://wa.me/919769351231" class="key-btn" target="_blank">WhatsApp</a>
-        <a href="mailto:restgenmgr@gmail.com" class="key-btn">Email Me</a>
-        <a href="resume.pdf" download class="key-btn">Download CV</a>
-        <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="key-btn">Facebook</a>
-        <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="key-btn">LinkedIn</a>
-        <a href="https://youtu.be/x2zc3Y05_Hk" target="_blank" class="key-btn" style="border-color: #ff0000; color: #ff0000;">Play Video</a>
+        <a href="tel:+919769351231" class="key-btn">Call Cell<span class="key-val">+91 9769351231</span></a>
+        <a href="https://wa.me/919769351231" class="key-btn" target="_blank">WhatsApp<span class="key-val">+91 9769351231</span></a>
+        <a href="mailto:restgenmgr1952@gmail.com" class="key-btn">Email Me<span class="key-val">restgenmgr1952@...</span></a>
+        <a href="resume.pdf" download class="key-btn">Download CV<span class="key-val">PDF Format</span></a>
+        <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="key-btn">Facebook<span class="key-val">F&B Manager</span></a>
+        <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="key-btn">LinkedIn<span class="key-val">Professional</span></a>
+        <a href="https://youtu.be/x2zc3Y05_Hk" target="_blank" class="key-btn" style="border-color: #ff0000; color: #ff0000;">Play Video<span class="key-val" style="color:#ff0000;">YouTube</span></a>
     </div>
 </header>
 
 <main class="max-w-7xl mx-auto px-6 py-10">
     
-    <section class="mb-32 reveal">
+    <section class="mb-24 reveal">
         <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Artistic Vision & Recognition</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div class="img-frame">
-                <img src="art1.png?v=1" class="w-full h-[500px] object-cover" alt="Art1">
+                <img src="art1.png" class="w-full h-[500px] object-cover" alt="Art1">
                 <p class="pt-4 text-center gold text-xs uppercase tracking-widest">Signature Art</p>
             </div>
-            <section class="max-w-4xl mx-auto px-6 py-16 border-b border-slate-800">
-    <h2 class="text-2xl font-bold gold mb-8 uppercase tracking-widest text-center">Executive Profile</h2>
-    <div class="text-slate-300 leading-relaxed space-y-6 text-justify">
-        <p class="text-xl font-semibold text-white">
-            With over two decades of international experience in the hospitality and maritime sectors, I have dedicated my career to the pursuit of operational excellence and transformative leadership.
-        </p>
-        
-        <p>
-            My journey began in the vibrant hospitality landscapes of India, moving through the competitive markets of the Middle East, and eventually spanning the globe aboard some of the world's most prestigious cruise lines, including Holland America Line and Royal Caribbean. As a resident of Mumbai, I bring a global perspective back to my home base, blending international standards with local expertise.
-        </p>
-        
-        <p>
-            Throughout my tenure as a General Manager and Food & Beverage Director, I have specialized in turning around underperforming operations and building high-performance teams from the ground up. My philosophy centers on the "Team Builder" approach—recognizing that the foundation of any 5-star guest experience is a motivated, well-trained, and empowered staff.
-        </p>
-
-        <p>
-            In the modern era, I have pivoted towards integrating AI-driven automation into traditional hospitality frameworks. By leveraging tools like n8n and autonomous agents, I aim to streamline back-of-house operations, allowing leadership to focus on what truly matters: the guest. This portfolio serves as a testament to that bridge between seasoned executive experience and future-forward technology.
-        </p>
-        
-        </div>
-</section>
             <div class="img-frame">
                 <img src="award.jpg" class="w-full h-[500px] object-cover" alt="Award">
                 <p class="pt-4 text-center gold text-xs uppercase tracking-widest">Global Recognition</p>
-                <footer class="text-center py-12 px-6 text-slate-500 text-[11px] border-t border-slate-900 uppercase tracking-widest leading-loose">
-    <div class="max-w-3xl mx-auto mb-6 normal-case text-slate-400 italic">
-        "In a market where 'Actively Searching' often invites lopsided terms, I remain committed to the rare 
-        pursuit of true Equal Opportunity. Finding a workplace that values merit over leverage is 
-        challenging, but essential for genuine transformation."
-    </div>
-    <p>© 2026 Nigel Anthony Thomas | Executive Portfolio | Resident of Mumbai, India</p>
-</footer>
             </div>
+        </div>
+    </section>
+
+    <section id="biography" class="max-w-5xl mx-auto mb-32 reveal border-y border-white/10 py-16 px-4">
+        <h2 class="gold text-sm tracking-[0.5em] uppercase mb-10 text-center">Professional Biography</h2>
+        <div class="space-y-10 text-center">
+            <p class="text-2xl md:text-3xl text-gray-200 font-light leading-relaxed">
+                Nigel Anthony Thomas is an accomplished <span class="gold font-semibold">Senior Hospitality Executive</span> with over two decades of international leadership experience. From world-class cruise lines to high-volume land operations, his career is defined by excellence.
+            </p>
+            <div class="bg-white/5 p-8 rounded-lg border border-c5a059/30 max-w-4xl mx-auto">
+                <p class="text-3xl md:text-5xl text-white font-bold italic leading-tight">
+                    "I specialize in <span class="gold">Life Without Chaos</span>—transforming operational friction into seamless, high-luxury efficiency."
+                </p>
+            </div>
+            <p class="text-xl text-gray-400 font-light tracking-wide max-w-3xl mx-auto text-center">
+                Specializing in F&B consulting, staff mentoring, and the implementation of robust SOPs that drive consistent growth and guest satisfaction.
+            </p>
         </div>
     </section>
 
@@ -107,23 +98,6 @@
             <img src="c4.png" class="cert-card"><img src="c5.png" class="cert-card"><img src="c6.png" class="cert-card"><img src="c7.png" class="cert-card"><img src="be10x.png" class="cert-card">
         </div>
     </section>
-
-    <section id="biography" class="max-w-5xl mx-auto mb-40 text-center reveal border-t border-white/20 pt-20 px-4">
-        <h2 class="gold text-sm tracking-[0.5em] uppercase mb-12">Professional Biography</h2>
-        <div class="space-y-10">
-            <p class="text-2xl md:text-3xl text-gray-200 font-light leading-relaxed">
-                Nigel Anthony Thomas is an accomplished <span class="gold font-semibold">Senior Hospitality Executive</span> with over two decades of international leadership experience. From world-class cruise lines to high-volume land operations, his career is defined by excellence.
-            </p>
-            <div class="bg-white/5 p-8 rounded-lg border border-white/10 max-w-4xl mx-auto">
-                <p class="text-3xl md:text-5xl text-white font-bold italic leading-tight">
-                    "I specialize in <span class="gold">Life Without Chaos</span>—transforming operational friction into seamless, high-luxury efficiency."
-                </p>
-            </div>
-            <p class="text-xl text-gray-400 font-light tracking-wide max-w-3xl mx-auto">
-                Specializing in F&B consulting, staff mentoring, and the implementation of robust SOPs that drive consistent growth and guest satisfaction.
-            </p>
-        </div>
-    </section>
 </main>
 
 <footer class="text-center pb-20 text-gray-600 text-[10px] tracking-[0.6em] uppercase">
@@ -144,5 +118,4 @@
 </script>
 </body>
 </html>
-
 
