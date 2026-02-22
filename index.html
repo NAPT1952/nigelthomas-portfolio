@@ -99,4 +99,30 @@
 
     <section class="mb-24 reveal">
         <h2 class="text-center gold text-[10px] tracking-[0.4em] uppercase mb-8">Credentials</h2>
-        <div class="grid grid-cols-1 md:
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+            <img src="c1.png" class="cert-card"><img src="c2.png" class="cert-card"><img src="c3.png" class="cert-card">
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+            <img src="c4.png" class="cert-card"><img src="c5.png" class="cert-card"><img src="c6.png" class="cert-card"><img src="c7.png" class="cert-card"><img src="be10x.png" class="cert-card">
+        </div>
+    </section>
+</main>
+
+<footer class="text-center pb-12 text-gray-600 text-[8px] tracking-[0.5em] uppercase border-t border-white/5 pt-8">
+    &copy; 2026 Nigel Anthony Thomas.
+</footer>
+
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            if (elementTop < windowHeight - 50) { reveals[i].classList.add('active'); }
+        }
+    }
+    window.addEventListener('scroll', reveal);
+    window.onload = reveal;
+</script>
+</body>
+</html>
