@@ -8,9 +8,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; background: #050505; color: #fff; margin: 0; }
         .gold { color: #c5a059; }
-        .key-btn { border: 1px solid rgba(197, 160, 89, 0.4); background: rgba(197, 160, 89, 0.05); padding: 10px; transition: 0.3s; text-transform: uppercase; font-size: 0.6rem; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: white; }
+        .key-btn { border: 1px solid rgba(197, 160, 89, 0.4); background: rgba(197, 160, 89, 0.05); padding: 10px; transition: 0.3s; text-transform: uppercase; font-size: 0.6rem; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: white; min-height: 65px; }
         .key-btn:hover { background: #c5a059; color: #000; transform: translateY(-3px); }
-        .key-val { font-size: 0.7rem; color: #c5a059; margin-top: 2px; text-transform: none; }
+        .key-val { font-size: 0.7rem; color: #c5a059; margin-top: 2px; text-transform: none; font-weight: 400; }
         .key-btn:hover .key-val { color: #000; }
         .img-frame { border: 1px solid rgba(197, 160, 89, 0.2); padding: 10px; background: rgba(255,255,255,0.01); }
         .cert-card { border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; width: 100%; }
@@ -32,17 +32,37 @@
         <a href="resume.pdf" download class="key-btn">Download CV<span class="key-val">Professional PDF</span></a>
         <a href="https://facebook.com/FoodBeverageMgr/" target="_blank" class="key-btn">Facebook<span class="key-val">F&B Community</span></a>
         <a href="https://linkedin.com/in/nathomas-hospitality" target="_blank" class="key-btn">LinkedIn<span class="key-val">Connect Now</span></a>
-        <a href="https://youtu.be/x2zc3Y05_Hk" target="_blank" class="key-btn" style="border-color:#ff0000;color:#ff0000;">Play Video<span class="key-val" style="color:#ff0000;">YouTube Presentation</span></a>
+        <a href="https://youtu.be/x2zc3Y05_Hk" target="_blank" class="key-btn" style="border-color:#ff0000;color:#ff0000;">Play Video<span class="key-val" style="color:#ff0000;">YouTube</span></a>
     </div>
 </header>
 
 <main class="max-w-6xl mx-auto px-6">
-    <section class="mb-24 reveal">
+    <section class="mb-20 reveal">
         <h2 class="text-center gold text-[10px] tracking-[0.4em] uppercase mb-8">Artistic Vision & Recognition</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="img-frame"><img src="art1.png" class="w-full h-96 object-cover"><p class="pt-2 text-center gold text-[10px] uppercase">Signature Art</p></div>
             <div class="img-frame"><img src="award.jpg" class="w-full h-96 object-cover"><p class="pt-2 text-center gold text-[10px] uppercase">Global Recognition</p></div>
         </div>
+    </section>
+
+    <section class="mb-24 reveal border-y border-white/10 py-16">
+        <h2 class="gold text-[10px] tracking-[0.5em] uppercase mb-10 text-center">Global Professional Biography</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-300 mb-12">
+            <div class="pl-4 border-l-2 border-gold">
+                <h3 class="gold font-bold mb-2 uppercase text-[11px]">Maritime Excellence (20+ Years)</h3>
+                <p>Over two decades of high-volume F&B leadership on global cruise lines, mastering 5-star standards in complex environments.</p>
+            </div>
+            <div class="pl-4 border-l-2 border-gold">
+                <h3 class="gold font-bold mb-2 uppercase text-[11px]">Middle East Experience (6 Years)</h3>
+                <p>Strategic management of multi-cultural teams and luxury operations across the Middle East's most competitive markets.</p>
+            </div>
+            <div class="pl-4 border-l-2 border-gold">
+                <h3 class="gold font-bold mb-2 uppercase text-[11px]">India & Asia (5+ Years)</h3>
+                <p>Driving operational excellence and consultancy in India, bridging the gap between global standards and local market growth.</p>
+            </div>
+        </div>
+        <p class="text-2xl md:text-4xl font-bold italic text-center mb-6 leading-tight">"A Career Defined by Scale, Quality, and Life Without Chaos."</p>
+        <p class="text-center text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">Nigel Anthony Thomas leverages over 30 years of cross-continental expertise to transform hospitality operations into seamless, profitable models of excellence.</p>
     </section>
 
     <section class="mb-24 reveal">
@@ -72,20 +92,9 @@
             <img src="c4.png" class="cert-card"><img src="c5.png" class="cert-card"><img src="c6.png" class="cert-card"><img src="c7.png" class="cert-card"><img src="be10x.png" class="cert-card">
         </div>
     </section>
-
-    <section class="mb-32 reveal border-t border-white/10 pt-20">
-        <h2 class="gold text-[10px] tracking-[0.5em] uppercase mb-10 text-center">Global Professional Biography</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-400 mb-12">
-            <div class="pl-4 border-l border-gold/40"><strong>India & Asia:</strong> Senior consultancy in Bangalore and beyond, adapting global standards to the Indian market.</div>
-            <div class="pl-4 border-l border-gold/40"><strong>Middle East:</strong> International management of luxury multi-cultural hospitality operations.</div>
-            <div class="pl-4 border-l border-gold/40"><strong>Maritime:</strong> 10+ years of high-volume F&B leadership on global cruise lines.</div>
-        </div>
-        <p class="text-2xl md:text-3xl font-bold italic text-center mb-6">"Delivering Life Without Chaos from India to the Middle East."</p>
-        <p class="text-center text-gray-500 max-w-2xl mx-auto">With 20+ years of international leadership, Nigel Anthony Thomas transforms hospitality friction into seamless, high-luxury efficiency.</p>
-    </section>
 </main>
 
-<footer class="text-center pb-12 text-gray-600 text-[8px] tracking-[0.5em] uppercase">
+<footer class="text-center pb-12 text-gray-600 text-[8px] tracking-[0.5em] uppercase border-t border-white/5 pt-8">
     &copy; 2026 Nigel Anthony Thomas.
 </footer>
 
