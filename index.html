@@ -9,11 +9,11 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; margin: 0; overflow-x: hidden; }
         .gold { color: #c5a059; }
-        .key-btn { border: 1px solid rgba(197, 160, 89, 0.6); background: rgba(197, 160, 89, 0.05); padding: 14px 10px; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.7rem; cursor: pointer; display: inline-block; width: 100%; text-align: center; font-weight: 600; }
+        .key-btn { border: 1px solid rgba(197, 160, 89, 0.6); background: rgba(197, 160, 89, 0.05); padding: 14px 10px; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.65rem; cursor: pointer; display: inline-block; width: 100%; text-align: center; font-weight: 600; }
         .key-btn:hover { background: #c5a059; color: #000; transform: translateY(-5px); }
-        .img-frame { border: 1px solid rgba(197, 160, 89, 0.3); padding: 12px; background: rgba(255,255,255,0.02); margin-bottom: 10px; }
+        .img-frame { border: 1px solid rgba(197, 160, 89, 0.3); padding: 12px; background: rgba(255,255,255,0.02); }
         .cert-card { border: 1px solid rgba(255,255,255,0.1); width: 100%; height: auto; transition: 0.3s; }
-        .cert-card:hover { border-color: #c5a059; transform: scale(1.05); }
+        .cert-card:hover { border-color: #c5a059; transform: scale(1.03); }
         .reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
@@ -25,13 +25,14 @@
     <h1 class="text-5xl font-bold mb-4 tracking-tight">Nigel Anthony Thomas</h1>
     <p class="gold tracking-[0.4em] text-xs font-light uppercase mb-12">The Architecture of Operational Maturity</p>
     
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto px-4">
-        <a href="tel:+YOUR_NUMBER" class="key-btn">Cell / Call</a>
-        <a href="https://wa.me/YOUR_NUMBER" class="key-btn">WhatsApp</a>
-        <a href="mailto:your_email@gmail.com" class="key-btn">Email</a>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 max-w-7xl mx-auto px-4">
+        <a href="tel:+919769351231" class="key-btn">Cell / Call</a>
+        <a href="https://wa.me/919769351231" class="key-btn">WhatsApp</a>
+        <a href="mailto:restgenmgr@gmail.com" class="key-btn">Email</a>
         <a href="resume.pdf" download class="key-btn">Download CV</a>
-        <a href="https://facebook.com/YOUR_PROFILE" class="key-btn">Facebook</a>
-        <a href="https://linkedin.com/in/YOUR_PROFILE" class="key-btn">LinkedIn</a>
+        <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="key-btn">Facebook</a>
+        <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="key-btn">LinkedIn</a>
+        <a href="https://youtu.be/x2zc3Y05_Hk" target="_blank" class="key-btn" style="border-color: #ff0000; color: #ff0000;">Play Video</a>
     </div>
 </header>
 
@@ -69,12 +70,18 @@
         </div>
     </section>
 
-    <section class="mb-32 reveal">
-        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Professional Certifications</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <section class="mb-16 reveal">
+        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Core Certifications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <img src="c1.png" class="cert-card">
             <img src="c2.png" class="cert-card">
             <img src="c3.png" class="cert-card">
+        </div>
+    </section>
+
+    <section class="mb-32 reveal">
+        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Advanced Credentials</h2>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
             <img src="c4.png" class="cert-card">
             <img src="c5.png" class="cert-card">
             <img src="c6.png" class="cert-card">
@@ -83,10 +90,13 @@
         </div>
     </section>
 
-    <section class="max-w-5xl mx-auto mb-40 text-center reveal border-t border-white/10 pt-20">
-        <h2 class="gold text-xs tracking-[0.4em] uppercase mb-10">Executive Mission</h2>
-        <p class="text-3xl md:text-5xl text-gray-100 font-light leading-tight italic">
-            "Transforming operational chaos into sustainable maturity across the world's most prestigious luxury environments."
+    <section class="max-w-4xl mx-auto mb-40 text-center reveal border-t border-white/10 pt-20">
+        <h2 class="gold text-xs tracking-[0.4em] uppercase mb-10">Professional Biography</h2>
+        <p class="text-xl md:text-3xl text-gray-300 font-light leading-relaxed mb-8">
+            Nigel Anthony Thomas is a distinguished <span class="gold">Senior Hospitality Executive</span> with over two decades of global experience across restaurants and cruise ships.
+        </p>
+        <p class="text-2xl md:text-4xl text-white font-semibold italic leading-tight">
+            "My specialty is transforming high-stakes operational environments into models of luxury and efficiency. I provide <span class="gold">Life Without Chaos</span> for world-class Land and Sea operations."
         </p>
     </section>
 </main>
