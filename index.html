@@ -10,10 +10,9 @@
         body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; margin: 0; overflow-x: hidden; }
         .gold { color: #c5a059; }
         .key-btn { border: 1px solid rgba(197, 160, 89, 0.6); background: rgba(197, 160, 89, 0.05); padding: 14px 10px; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.65rem; cursor: pointer; display: inline-block; width: 100%; text-align: center; font-weight: 600; }
-        .key-btn:hover { background: #c5a059; color: #000; transform: translateY(-5px); }
+        .key-btn:hover { background: #c5a059; color: #000; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3); }
         .img-frame { border: 1px solid rgba(197, 160, 89, 0.3); padding: 12px; background: rgba(255,255,255,0.02); }
         .cert-card { border: 1px solid rgba(255,255,255,0.1); width: 100%; height: auto; transition: 0.3s; }
-        .cert-card:hover { border-color: #c5a059; transform: scale(1.03); }
         .reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
@@ -26,9 +25,9 @@
     <p class="gold tracking-[0.4em] text-xs font-light uppercase mb-12">The Architecture of Operational Maturity</p>
     
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 max-w-7xl mx-auto px-4">
-        <a href="tel:+919769351231" class="key-btn">Cell / Call</a>
+        <a href="tel:+919769351231" class="key-btn">Call Cell</a>
         <a href="https://wa.me/919769351231" class="key-btn">WhatsApp</a>
-        <a href="mailto:restgenmgr@gmail.com" class="key-btn">Email</a>
+        <a href="mailto:restgenmgr@gmail.com" class="key-btn">Email Me</a>
         <a href="resume.pdf" download class="key-btn">Download CV</a>
         <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="key-btn">Facebook</a>
         <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="key-btn">LinkedIn</a>
@@ -70,17 +69,13 @@
         </div>
     </section>
 
-    <section class="mb-16 reveal">
-        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Core Certifications</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <section class="mb-32 reveal">
+        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Core & Advanced Certifications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             <img src="c1.png" class="cert-card">
             <img src="c2.png" class="cert-card">
             <img src="c3.png" class="cert-card">
         </div>
-    </section>
-
-    <section class="mb-32 reveal">
-        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Advanced Credentials</h2>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
             <img src="c4.png" class="cert-card">
             <img src="c5.png" class="cert-card">
@@ -90,33 +85,11 @@
         </div>
     </section>
 
-    <section class="max-w-4xl mx-auto mb-40 text-center reveal border-t border-white/10 pt-20">
+    <section id="bio" class="max-w-4xl mx-auto mb-40 text-center reveal border-t border-white/10 pt-20 px-4">
         <h2 class="gold text-xs tracking-[0.4em] uppercase mb-10">Professional Biography</h2>
-        <p class="text-xl md:text-3xl text-gray-300 font-light leading-relaxed mb-8">
-            Nigel Anthony Thomas is a distinguished <span class="gold">Senior Hospitality Executive</span> with over two decades of global experience across restaurants and cruise ships.
-        </p>
-        <p class="text-2xl md:text-4xl text-white font-semibold italic leading-tight">
-            "My specialty is transforming high-stakes operational environments into models of luxury and efficiency. I provide <span class="gold">Life Without Chaos</span> for world-class Land and Sea operations."
-        </p>
-    </section>
-</main>
-
-<footer class="text-center pb-20 text-gray-600 text-[10px] tracking-[0.6em] uppercase">
-    &copy; 2026 Nigel Anthony Thomas. All Rights Reserved.
-</footer>
-
-<script>
-    function reveal() {
-        var reveals = document.querySelectorAll('.reveal');
-        for (var i = 0; i < reveals.length; i++) {
-            var windowHeight = window.innerHeight;
-            var elementTop = reveals[i].getBoundingClientRect().top;
-            if (elementTop < windowHeight - 50) { reveals[i].classList.add('active'); }
-        }
-    }
-    window.addEventListener('scroll', reveal);
-    reveal();
-</script>
-
-</body>
-</html>
+        <div class="space-y-6 text-left md:text-center">
+            <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
+                Nigel Anthony Thomas is a seasoned <span class="gold font-semibold">Senior Hospitality Executive</span> with over 20 years of international leadership experience across world-class restaurants and luxury cruise lines. 
+            </p>
+            <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
+                Expert in streamlining complex Food & Beverage operations, he specializes in transforming high-pressure environments into seamless, profitable models of excellence. His philosophy focuses on <span class="white font-semibold italic">"Life Without Chaos"</span>—
