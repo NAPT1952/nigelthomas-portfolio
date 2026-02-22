@@ -9,7 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; margin: 0; overflow-x: hidden; }
         .gold { color: #c5a059; }
-        .key-btn { border: 1px solid rgba(197, 160, 89, 0.6); background: rgba(197, 160, 89, 0.05); padding: 14px 10px; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.65rem; cursor: pointer; display: inline-block; width: 100%; text-align: center; font-weight: 600; }
+        .key-btn { border: 1px solid rgba(197, 160, 89, 0.6); background: rgba(197, 160, 89, 0.05); padding: 14px 10px; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.65rem; cursor: pointer; display: inline-block; width: 100%; text-align: center; font-weight: 600; text-decoration: none; color: white; }
         .key-btn:hover { background: #c5a059; color: #000; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3); }
         .img-frame { border: 1px solid rgba(197, 160, 89, 0.3); padding: 12px; background: rgba(255,255,255,0.02); }
         .cert-card { border: 1px solid rgba(255,255,255,0.1); width: 100%; height: auto; transition: 0.3s; }
@@ -20,7 +20,7 @@
 <body>
 
 <header class="text-center pt-20 pb-10 px-4">
-    <img src="profile.png" alt="Profile" class="w-40 h-40 mx-auto rounded-full border-4 border-white object-cover mb-6">
+    <img src="profile.png" alt="Nigel Anthony Thomas" class="w-40 h-40 mx-auto rounded-full border-4 border-white object-cover mb-6">
     <h1 class="text-5xl font-bold mb-4 tracking-tight">Nigel Anthony Thomas</h1>
     <p class="gold tracking-[0.4em] text-xs font-light uppercase mb-12">The Architecture of Operational Maturity</p>
     
@@ -38,15 +38,15 @@
 <main class="max-w-7xl mx-auto px-6 py-10">
     
     <section class="mb-32 reveal">
-        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Executive Profile & Recognition</h2>
+        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Artistic Vision & Recognition</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div class="img-frame">
-                <img src="profile.png" class="w-full h-[500px] object-cover">
-                <p class="pt-4 text-center gold text-xs uppercase tracking-widest">Artist Profile</p>
+                <img src="art.jpg" class="w-full h-[500px] object-cover">
+                <p class="pt-4 text-center gold text-xs uppercase tracking-widest">Signature Art</p>
             </div>
             <div class="img-frame">
                 <img src="award.jpg" class="w-full h-[500px] object-cover">
-                <p class="pt-4 text-center gold text-xs uppercase tracking-widest">Award & Recognition</p>
+                <p class="pt-4 text-center gold text-xs uppercase tracking-widest">Global Recognition</p>
             </div>
         </div>
     </section>
@@ -70,7 +70,7 @@
     </section>
 
     <section class="mb-32 reveal">
-        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Core & Advanced Certifications</h2>
+        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Professional Credentials</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             <img src="c1.png" class="cert-card">
             <img src="c2.png" class="cert-card">
@@ -89,7 +89,34 @@
         <h2 class="gold text-xs tracking-[0.4em] uppercase mb-10">Professional Biography</h2>
         <div class="space-y-6 text-left md:text-center">
             <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
-                Nigel Anthony Thomas is a seasoned <span class="gold font-semibold">Senior Hospitality Executive</span> with over 20 years of international leadership experience across world-class restaurants and luxury cruise lines. 
+                Nigel Anthony Thomas is an accomplished <span class="gold font-semibold">Senior Hospitality Executive</span> with over two decades of international leadership experience across luxury cruise lines and high-volume land operations.
             </p>
             <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
-                Expert in streamlining complex Food & Beverage operations, he specializes in transforming high-pressure environments into seamless, profitable models of excellence. His philosophy focuses on <span class="white font-semibold italic">"Life Without Chaos"</span>—
+                He is a specialist in <span class="white font-semibold italic">"Life Without Chaos"</span>—a philosophy dedicated to transforming operational friction into seamless efficiency. His expertise spans F&B consulting, staff mentoring, and the implementation of robust SOPs that drive consistent excellence in guest satisfaction and revenue growth.
+            </p>
+            <p class="text-3xl md:text-4xl text-white font-bold italic leading-tight pt-6">
+                "Eliminating operational noise to deliver pure luxury results."
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer class="text-center pb-20 text-gray-600 text-[10px] tracking-[0.6em] uppercase">
+    &copy; 2026 Nigel Anthony Thomas. All Rights Reserved.
+</footer>
+
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            if (elementTop < windowHeight - 50) { reveals[i].classList.add('active'); }
+        }
+    }
+    window.addEventListener('scroll', reveal);
+    reveal();
+</script>
+
+</body>
+</html>
