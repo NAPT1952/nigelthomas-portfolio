@@ -12,8 +12,8 @@
         .key-btn { border: 1px solid rgba(197, 160, 89, 0.6); background: rgba(197, 160, 89, 0.05); padding: 14px 10px; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.65rem; cursor: pointer; display: inline-block; width: 100%; text-align: center; font-weight: 600; text-decoration: none; color: white; }
         .key-btn:hover { background: #c5a059; color: #000; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3); }
         .img-frame { border: 1px solid rgba(197, 160, 89, 0.3); padding: 12px; background: rgba(255,255,255,0.02); }
-        .cert-card { border: 1px solid rgba(255,255,255,0.1); width: 100%; height: auto; transition: 0.3s; }
-        .reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
+        .cert-card { border: 1px solid rgba(255,255,255,0.1); width: 100%; height: auto; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
@@ -26,7 +26,7 @@
     
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 max-w-7xl mx-auto px-4">
         <a href="tel:+919769351231" class="key-btn">Call Cell</a>
-        <a href="https://wa.me/919769351231" class="key-btn">WhatsApp</a>
+        <a href="https://wa.me/919769351231" class="key-btn" target="_blank">WhatsApp</a>
         <a href="mailto:restgenmgr@gmail.com" class="key-btn">Email Me</a>
         <a href="resume.pdf" download class="key-btn">Download CV</a>
         <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="key-btn">Facebook</a>
@@ -41,18 +41,18 @@
         <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Artistic Vision & Recognition</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div class="img-frame">
-                <img src="art.jpg" class="w-full h-[500px] object-cover">
+                <img src="art1.png?v=1" class="w-full h-[500px] object-cover" alt="Art1">
                 <p class="pt-4 text-center gold text-xs uppercase tracking-widest">Signature Art</p>
             </div>
             <div class="img-frame">
-                <img src="award.jpg" class="w-full h-[500px] object-cover">
+                <img src="award.jpg" class="w-full h-[500px] object-cover" alt="Award">
                 <p class="pt-4 text-center gold text-xs uppercase tracking-widest">Global Recognition</p>
             </div>
         </div>
     </section>
 
     <section class="mb-32 reveal">
-        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Land Operations Portfolio</h2>
+        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Land Operations</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="img-frame"><img src="land1.jpg" class="w-full h-72 object-cover"></div>
             <div class="img-frame"><img src="land2.jpg" class="w-full h-72 object-cover"></div>
@@ -61,7 +61,7 @@
     </section>
 
     <section class="mb-32 reveal">
-        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Maritime Excellence Portfolio</h2>
+        <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Maritime Excellence</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="img-frame"><img src="sea1.jpg" class="w-full h-72 object-cover"></div>
             <div class="img-frame"><img src="sea2.jpeg" class="w-full h-72 object-cover"></div>
@@ -72,30 +72,26 @@
     <section class="mb-32 reveal">
         <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Professional Credentials</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-            <img src="c1.png" class="cert-card">
-            <img src="c2.png" class="cert-card">
-            <img src="c3.png" class="cert-card">
+            <img src="c1.png" class="cert-card"><img src="c2.png" class="cert-card"><img src="c3.png" class="cert-card">
         </div>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-            <img src="c4.png" class="cert-card">
-            <img src="c5.png" class="cert-card">
-            <img src="c6.png" class="cert-card">
-            <img src="c7.png" class="cert-card">
-            <img src="be10x.png" class="cert-card">
+            <img src="c4.png" class="cert-card"><img src="c5.png" class="cert-card"><img src="c6.png" class="cert-card"><img src="c7.png" class="cert-card"><img src="be10x.png" class="cert-card">
         </div>
     </section>
 
-    <section id="bio" class="max-w-4xl mx-auto mb-40 text-center reveal border-t border-white/10 pt-20 px-4">
-        <h2 class="gold text-xs tracking-[0.4em] uppercase mb-10">Professional Biography</h2>
-        <div class="space-y-6 text-left md:text-center">
-            <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
-                Nigel Anthony Thomas is an accomplished <span class="gold font-semibold">Senior Hospitality Executive</span> with over two decades of international leadership experience across luxury cruise lines and high-volume land operations.
+    <section id="biography" class="max-w-5xl mx-auto mb-40 text-center reveal border-t border-white/20 pt-20 px-4">
+        <h2 class="gold text-sm tracking-[0.5em] uppercase mb-12">Professional Biography</h2>
+        <div class="space-y-10">
+            <p class="text-2xl md:text-3xl text-gray-200 font-light leading-relaxed">
+                Nigel Anthony Thomas is an accomplished <span class="gold font-semibold">Senior Hospitality Executive</span> with over two decades of international leadership experience. From world-class cruise lines to high-volume land operations, his career is defined by excellence.
             </p>
-            <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
-                He is a specialist in <span class="white font-semibold italic">"Life Without Chaos"</span>—a philosophy dedicated to transforming operational friction into seamless efficiency. His expertise spans F&B consulting, staff mentoring, and the implementation of robust SOPs that drive consistent excellence in guest satisfaction and revenue growth.
-            </p>
-            <p class="text-3xl md:text-4xl text-white font-bold italic leading-tight pt-6">
-                "Eliminating operational noise to deliver pure luxury results."
+            <div class="bg-white/5 p-8 rounded-lg border border-white/10 max-w-4xl mx-auto">
+                <p class="text-3xl md:text-5xl text-white font-bold italic leading-tight">
+                    "I specialize in <span class="gold">Life Without Chaos</span>—transforming operational friction into seamless, high-luxury efficiency."
+                </p>
+            </div>
+            <p class="text-xl text-gray-400 font-light tracking-wide max-w-3xl mx-auto">
+                Specializing in F&B consulting, staff mentoring, and the implementation of robust SOPs that drive consistent growth and guest satisfaction.
             </p>
         </div>
     </section>
@@ -115,8 +111,7 @@
         }
     }
     window.addEventListener('scroll', reveal);
-    reveal();
+    window.onload = reveal;
 </script>
-
 </body>
 </html>
