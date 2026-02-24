@@ -29,15 +29,13 @@
         .bio-scroll-box { max-height: 500px; overflow-y: auto; padding: 25px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; margin-top: 20px; }
         .bio-scroll-box p { margin-bottom: 15px; }
 
-        /* FIXED Certificate Slider */
-        .cert-slider-wrapper { position: relative; width: 100%; margin: 20px 0; }
+        /* Certificate Slider */
         .cert-carousel { 
             display: flex; 
             overflow-x: auto; 
             gap: 20px; 
             padding: 20px; 
             scroll-snap-type: x mandatory; 
-            -webkit-overflow-scrolling: touch;
         }
         .cert-card { 
             flex: 0 0 280px; 
@@ -47,18 +45,29 @@
             border: 1px solid #ddd; 
             border-radius: 10px; 
             text-align: center; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        .cert-card img { width: 100%; height: 200px; object-fit: contain; background: #fff; }
-        .cert-title { font-size: 0.85em; font-weight: bold; margin-top: 10px; color: #1a2a6c; }
+        .cert-card img { width: 100%; height: 200px; object-fit: contain; }
 
         /* Portfolio Gallery */
         .image-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 20px 0; }
         .image-grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; }
 
         /* Employer Grid */
-        .employer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin: 20px 0; }
-        .cube { background: white; border: 1px solid #ddd; border-radius: 8px; height: 100px; display: flex; align-items: center; justify-content: center; color: #999; font-weight: 600; }
+        .employer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin: 20px 0; }
+        .cube { 
+            background: white; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            min-height: 140px; 
+            padding: 15px;
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            text-align: center;
+            font-size: 0.85em;
+        }
+        .cube strong { color: #1a2a6c; display: block; margin-bottom: 5px; }
 
         footer { text-align: center; padding: 30px; color: #777; font-size: 0.85em; }
     </style>
@@ -73,8 +82,8 @@
             
             <div class="keys-nav">
                 <a href="https://wa.me/919769351231" class="key-btn">CEL/WA:<br>+919769351231</a>
-                <a href="mailto:napt1952@gmail.com" class="key-btn">EMAIL:<br>napt1952</a>
-                <a href="mailto:restgenmgr1952@gmail.com" class="key-btn">EMAIL:<br>restgenmgr</a>
+                <a href="mailto:napt1952@gmail.com" class="key-btn">EMAIL:<br>napt1952@gmail.com</a>
+                <a href="mailto:restgenmgr1952@gmail.com" class="key-btn">EMAIL:<br>restgenmgr1952@gmail.com</a>
                 <a href="https://www.linkedin.com/in/nathomas-hospitality" class="key-btn" target="_blank">LINKEDIN</a>
                 <a href="https://www.facebook.com/FoodBeverageMgr/" class="key-btn" target="_blank">FACEBOOK</a>
                 <a href="resume.pdf" class="key-btn" target="_blank">DOWNLOAD<br>MY CV</a>
@@ -87,58 +96,70 @@
         
         <section class="section">
             <h2>My Executive Narrative</h2>
-            <p><strong>I am a hospitality leader with over 24 years of global experience</strong> across luxury hotels, cruise lines, and high-volume beverage operations. I have built a proven track record in delivering operational excellence and elevated guest experiences.</p>
-
             <div class="bio-scroll-box">
-                <p>With a dynamic and globally diverse career spanning over two decades, I have established myself as a seasoned hospitality professional specializing in beverage operations and leadership across multicultural teams.</p>
-                <p>My career includes senior roles at <strong>Ramada, Le Méridien, and Al Hambra Hotel</strong>, as well as 20 years at sea as a Beverage Manager and Assistant Culinary Operations Manager. I focus on cost control, revenue growth, and strict adherence to international standards like USPH and HACCP.</p>
-                <p>Whether managing resort operations in <strong>Bangalore</strong> or high-volume restaurant environments in the <strong>USA</strong> (Seattle, Miami, Cleveland), my commitment remains the same: delivering exceptional service through disciplined leadership.</p>
+                <p>I am a hospitality leader with over 24 years of global experience across luxury hotels, cruise lines, and high-volume beverage operations. Throughout my career, I have built a proven track record in delivering operational excellence and elevated guest experiences. Currently based in Mumbai, I have held senior leadership roles across India, the Middle East, the United States, and international cruise environments.</p>
+                <p>With a dynamic and globally diverse career spanning over two decades, I have established myself as a seasoned hospitality professional specializing in beverage operations and leadership across multicultural teams. My journey is marked by extensive international exposure, having worked across India, the Middle East, the United States, and international waters.</p>
+                <p>In Bangalore, I served as General Manager at Nandi Hills Resort and Operations Manager at KlayWorkZ Barista. My Middle East tenure includes management roles with Ramada, Le Méridien, and Al Hambra Hotel. I also spent over two decades at sea as a Beverage Manager and Assistant Culinary Operations Manager, leading multicultural teams in large-scale environments.</p>
             </div>
         </section>
 
         <section class="section">
             <h2>Professional Certifications</h2>
-            <p style="text-align:center; color:#888; font-size: 0.8em;">(Scroll right to see all certificates)</p>
             <div class="cert-carousel">
-                <div class="cert-card"><img src="c1.jpeg"><div class="cert-title">Certified Supervisor</div></div>
-                <div class="cert-card"><img src="c2.jpg"><div class="cert-title">Leadership Skills</div></div>
-                <div class="cert-card"><img src="c3.jpg"><div class="cert-title">Guest Service Mgmt</div></div>
-                <div class="cert-card"><img src="c4.jpg"><div class="cert-title">F&B Control</div></div>
-                <div class="cert-card"><img src="c5.jpg"><div class="cert-title">F&B Specialization</div></div>
-                <div class="cert-card"><img src="c7.jpg"><div class="cert-title">ServSafe</div></div>
-                <div class="cert-card"><img src="c9.jpeg"><div class="cert-title">Vessel Sanitation</div></div>
-                <div class="cert-card"><img src="c13.jpg"><div class="cert-title">Excel & AI</div></div>
-                <div class="cert-card"><img src="c14.png"><div class="cert-title">AI & ChatGPT</div></div>
+                <div class="cert-card"><img src="c1.jpeg"></div>
+                <div class="cert-card"><img src="c2.jpg"></div>
+                <div class="cert-card"><img src="c3.jpg"></div>
+                <div class="cert-card"><img src="c4.jpg"></div>
+                <div class="cert-card"><img src="c5.jpg"></div>
+                <div class="cert-card"><img src="c7.jpg"></div>
+                <div class="cert-card"><img src="c9.jpeg"></div>
+                <div class="cert-card"><img src="c13.jpg"></div>
+                <div class="cert-card"><img src="c14.png"></div>
             </div>
         </section>
 
         <section class="section">
             <h2>Work Portfolio</h2>
             <div class="image-grid">
-                <img src="art1.png" alt="Art">
-                <img src="award.jpg" alt="Award">
-                <img src="land1.jpg" alt="Land">
-                <img src="land2.jpg" alt="Land">
-                <img src="land3.jpg" alt="Land">
-                <img src="sea1.jpg" alt="Sea">
-                <img src="sea2.jpeg" alt="Sea">
-                <img src="sea3.jpeg" alt="Sea">
+                <img src="art1.png" alt="Art"><img src="award.jpg" alt="Award">
+                <img src="land1.jpg" alt="Land"><img src="land2.jpg" alt="Land"><img src="land3.jpg" alt="Land">
+                <img src="sea1.jpg" alt="Sea"><img src="sea2.jpeg" alt="Sea"><img src="sea3.jpeg" alt="Sea">
             </div>
         </section>
 
-        <h2 style="text-align: center;">Employer & HR Partners</h2>
+        <h2 style="text-align: center; color: #1a2a6c;">Employer & HR Partners</h2>
         <div class="employer-grid">
-            <div class="cube">Slot 1</div><div class="cube">Slot 2</div><div class="cube">Slot 3</div>
-            <div class="cube">Slot 4</div><div class="cube">Slot 5</div><div class="cube">Slot 6</div>
-            <div class="cube">Slot 7</div><div class="cube">Slot 8</div><div class="cube">Slot 9</div>
-            <div class="cube">Slot 10</div><div class="cube">Slot 11</div><div class="cube">Slot 12</div>
+            <div class="cube">
+                <strong>Mr. Sudhit Tiwari</strong>
+                Placement Agent<br>
+                Cel: +91 70515 04844<br>
+                Hungary-UK-Eastern Europe
+            </div>
+            <div class="cube">
+                <strong>Das Subburaj</strong>
+                AI Generalist<br>
+                das8369372112@gmail.com<br>
+                Remote: Short/Long Term
+            </div>
+            <div class="cube">Slot 3: Available</div>
+            <div class="cube">Slot 4: Available</div>
+            <div class="cube">Slot 5: Available</div>
+            <div class="cube">Slot 6: Available</div>
+            <div class="cube">Slot 7: Available</div>
+            <div class="cube">Slot 8: Available</div>
+            <div class="cube">Slot 9: Available</div>
+            <div class="cube">Slot 10: Available</div>
+            <div class="cube">Slot 11: Available</div>
+            <div class="cube">Slot 12: Available</div>
         </div>
 
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="https://wa.me/919769351231" style="background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold;">Inquiry Space @ Rs. 99 PM</a>
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="https://wa.me/919769351231" style="background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block;">
+                Inquiry Space @ Rs. 99 PM
+            </a>
         </div>
     </div>
 
-    <footer><p>&copy; 2026 Nigel Anthony Thomas</p></footer>
+    <footer><p>&copy; 2026 Nigel Anthony Thomas. Built with Resilience.</p></footer>
 </body>
 </html>
