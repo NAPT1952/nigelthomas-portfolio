@@ -12,6 +12,7 @@
         header { background: #1a2a6c; color: white; padding: 40px 0; text-align: center; border-bottom: 5px solid #f2a900; }
         .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid #f2a900; margin-bottom: 15px; object-fit: cover; background: #fff; }
         
+        /* 7 Keys Buttons */
         .keys-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 25px 0; }
         .key-btn { 
             background: #f2a900; color: #1a2a6c; padding: 12px 8px; border-radius: 5px; 
@@ -23,28 +24,40 @@
 
         .section { background: white; padding: 35px; margin: 25px 0; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         h2 { color: #1a2a6c; border-bottom: 2px solid #f2a900; padding-bottom: 10px; margin-top: 0; }
-        h3 { color: #1a2a6c; margin-top: 20px; }
+        
+        /* Bio Scroll Box */
+        .bio-scroll-box { max-height: 500px; overflow-y: auto; padding: 25px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; margin-top: 20px; }
+        .bio-scroll-box p { margin-bottom: 15px; }
 
-        .bio-scroll-container { 
-            max-height: 550px; 
-            overflow-y: auto; 
-            padding: 25px; 
-            background: #fafafa; 
-            border: 1px solid #eee; 
-            border-radius: 8px; 
-            margin-top: 20px;
+        /* FIXED Certificate Slider */
+        .cert-slider-wrapper { position: relative; width: 100%; margin: 20px 0; }
+        .cert-carousel { 
+            display: flex; 
+            overflow-x: auto; 
+            gap: 20px; 
+            padding: 20px; 
+            scroll-snap-type: x mandatory; 
+            -webkit-overflow-scrolling: touch;
         }
-        .bio-scroll-container p { margin-bottom: 15px; text-align: justify; }
+        .cert-card { 
+            flex: 0 0 280px; 
+            scroll-snap-align: center; 
+            background: white; 
+            padding: 15px; 
+            border: 1px solid #ddd; 
+            border-radius: 10px; 
+            text-align: center; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .cert-card img { width: 100%; height: 200px; object-fit: contain; background: #fff; }
+        .cert-title { font-size: 0.85em; font-weight: bold; margin-top: 10px; color: #1a2a6c; }
 
-        .gallery-title { font-weight: bold; color: #1a2a6c; margin-bottom: 15px; display: block; border-left: 4px solid #f2a900; padding-left: 10px; }
-        .image-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 30px; }
+        /* Portfolio Gallery */
+        .image-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 20px 0; }
         .image-grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; }
 
-        .cert-carousel { display: flex; overflow-x: auto; gap: 20px; padding: 20px 0; scroll-snap-type: x mandatory; }
-        .cert-card { flex: 0 0 300px; scroll-snap-align: start; background: white; padding: 10px; border: 1px solid #ddd; border-radius: 8px; text-align: center; }
-        .cert-card img { width: 100%; height: 220px; object-fit: contain; }
-
-        .employer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        /* Employer Grid */
+        .employer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin: 20px 0; }
         .cube { background: white; border: 1px solid #ddd; border-radius: 8px; height: 100px; display: flex; align-items: center; justify-content: center; color: #999; font-weight: 600; }
 
         footer { text-align: center; padding: 30px; color: #777; font-size: 0.85em; }
@@ -65,7 +78,7 @@
                 <a href="https://www.linkedin.com/in/nathomas-hospitality" class="key-btn" target="_blank">LINKEDIN</a>
                 <a href="https://www.facebook.com/FoodBeverageMgr/" class="key-btn" target="_blank">FACEBOOK</a>
                 <a href="resume.pdf" class="key-btn" target="_blank">DOWNLOAD<br>MY CV</a>
-                <a href="https://youtu.be/x2zc3Y05_Hk?si=AuEjCnV7cluNG_5v" class="key-btn" target="_blank">YOUTUBE<br>VIDEO</a>
+                <a href="https://youtu.be/x2zc3Y05_Hk" class="key-btn" target="_blank">YOUTUBE<br>VIDEO</a>
             </div>
         </div>
     </header>
@@ -73,69 +86,47 @@
     <div class="container">
         
         <section class="section">
-            <h2>My Executive Summary</h2>
-            <p>I am a hospitality leader with over 24 years of global experience across luxury hotels, cruise lines, and high-volume beverage operations. Throughout my career, I have built a proven track record in delivering operational excellence and elevated guest experiences. Currently based in Mumbai, I have held senior leadership roles across India, the Middle East, the United States, and international cruise environments.</p>
-            <p>I am known for my leadership, discipline, and unwavering focus on service excellence. I bring deep expertise in beverage operations, team development, and international hospitality standards to every project I undertake.</p>
-            
-            <h2>My Professional Journey</h2>
-            <div class="bio-scroll-container">
-                <p>With a dynamic and globally diverse career spanning over two decades, I have established myself as a seasoned hospitality professional specializing in beverage operations, large-scale service environments, and leadership across multicultural teams. My career reflects a consistent trajectory of growth and international exposure, positioning me as a versatile leader capable of adapting to any setting—from luxury hotels to high-volume cruise operations.</p>
+            <h2>My Executive Narrative</h2>
+            <p><strong>I am a hospitality leader with over 24 years of global experience</strong> across luxury hotels, cruise lines, and high-volume beverage operations. I have built a proven track record in delivering operational excellence and elevated guest experiences.</p>
 
-                <h3>Global Exposure & Leadership</h3>
-                <p>My professional journey is marked by extensive international experience, having worked across India, the Middle East, the United States, and international waters. This global exposure has enabled me to develop a deep understanding of varied guest expectations, service cultures, and operational standards. I take pride in my ability to seamlessly transition between markets while maintaining consistency in service delivery.</p>
-
-                <h3>Establishing Roots in India</h3>
-                <p>My early leadership footprint in India includes my tenure in Bangalore, where I held key operational roles managing both people and processes. As General Manager at Nandi Hills Resort, I was responsible for overseeing overall resort operations, food and beverage, staff training, and financial performance. My leadership ensured smooth day-to-day functioning while maintaining high standards of hospitality.</p>
-                <p>Additionally, my role as Operations Manager at KlayWorkZ Barista further strengthened my expertise in beverage-led operations. Here, I focused on optimizing workflow, enhancing customer experience, and managing teams in a fast-paced environment.</p>
-
-                <h3>Expansion into the Middle East</h3>
-                <p>My career expanded significantly during my time in the Middle East, where I worked with globally recognized brands such as Ramada and Le Méridien. These roles exposed me to luxury hospitality standards and reinforced my understanding of structured operations and brand compliance. Working in this region also enhanced my ability to lead culturally diverse teams—a skill I consider essential in international hospitality.</p>
-
-                <h3>Two Decades at Sea</h3>
-                <p>One of the most defining phases of my career has been my extensive experience at sea, where I spent over 20 years working on cruise ships. In roles such as Beverage Manager and Assistant Culinary Operations Manager, I managed complex, high-volume operations that required precision, discipline, and adaptability. These environments are among the most demanding in the industry, and they sharpened my leadership, problem-solving, and crisis management abilities.</p>
-
-                <h3>Experience in the United States</h3>
-                <p>I further expanded my professional footprint in the United States, spending approximately six years in operations management roles across Seattle, Miami, and Cleveland. Working in the U.S. required a strong focus on efficiency and adaptability to a competitive, fast-evolving hospitality landscape.</p>
-
-                <h3>My Commitment to Excellence</h3>
-                <p>Across all my roles, I have demonstrated a consistent commitment to leadership and team development. I believe that strong teams are the foundation of successful operations. My expertise lies in beverage operations, where I bring both practical experience and a passion for global beverage culture. I am particularly effective in roles that require both strategic oversight and hands-on execution.</p>
-
-                <p>Currently, I am focused on advancing into senior leadership roles within luxury hospitality and premium F&B operations. I look forward to contributing to an organization that values excellence, innovation, and global standards.</p>
+            <div class="bio-scroll-box">
+                <p>With a dynamic and globally diverse career spanning over two decades, I have established myself as a seasoned hospitality professional specializing in beverage operations and leadership across multicultural teams.</p>
+                <p>My career includes senior roles at <strong>Ramada, Le Méridien, and Al Hambra Hotel</strong>, as well as 20 years at sea as a Beverage Manager and Assistant Culinary Operations Manager. I focus on cost control, revenue growth, and strict adherence to international standards like USPH and HACCP.</p>
+                <p>Whether managing resort operations in <strong>Bangalore</strong> or high-volume restaurant environments in the <strong>USA</strong> (Seattle, Miami, Cleveland), my commitment remains the same: delivering exceptional service through disciplined leadership.</p>
             </div>
         </section>
 
         <section class="section">
-            <h2>My Work Portfolio</h2>
-            <span class="gallery-title">Recognition & Art</span>
-            <div class="image-grid" style="grid-template-columns: 1fr 1fr;">
-                <img src="art1.png" alt="My Art">
-                <img src="award.jpg" alt="My Award">
-            </div>
-
-            <span class="gallery-title">Land Operations</span>
-            <div class="image-grid">
-                <img src="land1.jpg" alt="Land 1"><img src="land2.jpg" alt="Land 2"><img src="land3.jpg" alt="Land 3">
-            </div>
-
-            <span class="gallery-title">Sea Operations</span>
-            <div class="image-grid">
-                <img src="sea1.jpg" alt="Sea 1"><img src="sea2.jpeg" alt="Sea 2"><img src="sea3.jpeg" alt="Sea 3">
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>My Professional Certifications</h2>
+            <h2>Professional Certifications</h2>
+            <p style="text-align:center; color:#888; font-size: 0.8em;">(Scroll right to see all certificates)</p>
             <div class="cert-carousel">
-                <div class="cert-card"><img src="c1.jpeg" alt="Cert 1"></div>
-                <div class="cert-card"><img src="c2.jpg" alt="Cert 2"></div>
-                <div class="cert-card"><img src="c3.jpg" alt="Cert 3"></div>
-                <div class="cert-card"><img src="c4.jpg" alt="Cert 4"></div>
-                <div class="cert-card"><img src="c13.jpg" alt="Cert 13"></div>
-                <div class="cert-card"><img src="c14.png" alt="Cert 14"></div>
+                <div class="cert-card"><img src="c1.jpeg"><div class="cert-title">Certified Supervisor</div></div>
+                <div class="cert-card"><img src="c2.jpg"><div class="cert-title">Leadership Skills</div></div>
+                <div class="cert-card"><img src="c3.jpg"><div class="cert-title">Guest Service Mgmt</div></div>
+                <div class="cert-card"><img src="c4.jpg"><div class="cert-title">F&B Control</div></div>
+                <div class="cert-card"><img src="c5.jpg"><div class="cert-title">F&B Specialization</div></div>
+                <div class="cert-card"><img src="c7.jpg"><div class="cert-title">ServSafe</div></div>
+                <div class="cert-card"><img src="c9.jpeg"><div class="cert-title">Vessel Sanitation</div></div>
+                <div class="cert-card"><img src="c13.jpg"><div class="cert-title">Excel & AI</div></div>
+                <div class="cert-card"><img src="c14.png"><div class="cert-title">AI & ChatGPT</div></div>
             </div>
         </section>
 
-        <h2 style="text-align: center; color: #1a2a6c;">Employer & HR Partners</h2>
+        <section class="section">
+            <h2>Work Portfolio</h2>
+            <div class="image-grid">
+                <img src="art1.png" alt="Art">
+                <img src="award.jpg" alt="Award">
+                <img src="land1.jpg" alt="Land">
+                <img src="land2.jpg" alt="Land">
+                <img src="land3.jpg" alt="Land">
+                <img src="sea1.jpg" alt="Sea">
+                <img src="sea2.jpeg" alt="Sea">
+                <img src="sea3.jpeg" alt="Sea">
+            </div>
+        </section>
+
+        <h2 style="text-align: center;">Employer & HR Partners</h2>
         <div class="employer-grid">
             <div class="cube">Slot 1</div><div class="cube">Slot 2</div><div class="cube">Slot 3</div>
             <div class="cube">Slot 4</div><div class="cube">Slot 5</div><div class="cube">Slot 6</div>
@@ -143,14 +134,11 @@
             <div class="cube">Slot 10</div><div class="cube">Slot 11</div><div class="cube">Slot 12</div>
         </div>
 
-        <div style="text-align: center; margin: 40px 0;">
-            <a href="https://wa.me/919769351231?text=Hi Nigel, I'm interested in reserving a partner space." 
-               style="background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block;">
-                Inquiry Space @ Rs. 99 PM
-            </a>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://wa.me/919769351231" style="background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold;">Inquiry Space @ Rs. 99 PM</a>
         </div>
     </div>
 
-    <footer><p>&copy; 2026 Nigel Anthony Thomas. All Rights Reserved.</p></footer>
+    <footer><p>&copy; 2026 Nigel Anthony Thomas</p></footer>
 </body>
 </html>
