@@ -6,63 +6,128 @@
     <title>Nigel Anthony Thomas | Senior Hospitality Professional</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; margin: 0; background: #f4f7f6; [cite_start]} [cite: 3]
-        .container { max-width: 1100px; margin: 0 auto; padding: 20px; [cite_start]} [cite: 4]
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; margin: 0; background: #f4f7f6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
         
-        [cite_start]/* Header Section - Navy and Gold Theme [cite: 5, 6] */
-        header { background: #1a2a6c; color: white; padding: 60px 0; text-align: center; border-bottom: 5px solid #f2a900; }
-        header h1 { margin: 0; font-size: 2.5em; [cite_start]} [cite: 7]
-        header p { font-size: 1.2em; opacity: 0.9; [cite_start]} [cite: 8]
+        /* Header & Profile Section */
+        header { background: #1a2a6c; color: white; padding: 40px 0; text-align: center; border-bottom: 5px solid #f2a900; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid #f2a900; margin-bottom: 15px; object-fit: cover; background: #fff; }
+        
+        /* 7 Keys Navigation Buttons */
+        .keys-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 25px 0; }
+        .key-btn { 
+            background: #f2a900; color: #1a2a6c; padding: 12px 8px; border-radius: 5px; 
+            text-align: center; font-weight: bold; font-size: 0.8em; text-decoration: none;
+            display: flex; align-items: center; justify-content: center; transition: 0.3s;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        .key-btn:hover { background: #fff; color: #1a2a6c; transform: translateY(-2px); }
 
-        /* Professional Content Styling */
-        .section { background: white; padding: 40px; margin: 40px 0; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h2 { color: #1a2a6c; border-bottom: 2px solid #f2a900; padding-bottom: 10px; display: inline-block; }
+        /* Professional Sections */
+        .section { background: white; padding: 35px; margin: 25px 0; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h2 { color: #1a2a6c; border-bottom: 2px solid #f2a900; padding-bottom: 10px; margin-top: 0; }
 
-        [cite_start]/* CV Download Button [cite: 10, 11] */
-        .cv-section { text-align: center; margin: 40px 0; }
-        .btn-download { background: #f2a900; color: #1a2a6c; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s; }
-        .btn-download:hover { background: #e09b00; transform: translateY(-2px); }
+        /* Gallery Styling */
+        .gallery-title { font-weight: bold; color: #1a2a6c; margin-bottom: 15px; display: block; border-left: 4px solid #f2a900; padding-left: 10px; }
+        .image-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 30px; }
+        .image-grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; }
 
-        footer { text-align: center; padding: 40px; color: #777; font-size: 0.9em; [cite_start]} [cite: 20]
+        /* Experience List */
+        .exp-list { list-style: none; padding: 0; }
+        .exp-list li { margin-bottom: 12px; padding-left: 25px; position: relative; }
+        .exp-list li::before { content: "✓"; color: #f2a900; position: absolute; left: 0; font-weight: bold; }
+
+        /* Employer Grid */
+        .employer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .cube { background: white; border: 1px solid #ddd; border-radius: 8px; height: 100px; display: flex; align-items: center; justify-content: center; color: #999; font-weight: 600; }
+
+        footer { text-align: center; padding: 30px; color: #777; font-size: 0.85em; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="container">
-            [cite_start]<h1>Nigel Anthony Thomas</h1> [cite: 21]
-            [cite_start]<p>20+ Years Excellence in Global Hospitality & Resort Management</p> [cite: 21]
-            <p>Mumbai, India | [cite_start]Senior Operations Professional</p> [cite: 21]
+            <img src="profile.png" alt="Nigel Anthony Thomas" class="profile-img">
+            <h1>Nigel Anthony Thomas</h1>
+            <p style="margin-bottom: 20px;">Hospitality & F&B Operations Manager</p>
+            
+            <div class="keys-nav">
+                <a href="https://wa.me/919769351231" class="key-btn">CEL/WA:<br>+919769351231</a>
+                <a href="mailto:napt1952@gmail.com" class="key-btn">EMAIL:<br>napt1952</a>
+                <a href="mailto:restgenmgr1952@gmail.com" class="key-btn">EMAIL:<br>restgenmgr</a>
+                <a href="https://www.linkedin.com/in/nathomas-hospitality" class="key-btn" target="_blank">LINKEDIN</a>
+                <a href="https://www.facebook.com/FoodBeverageMgr/" class="key-btn" target="_blank">FACEBOOK</a>
+                <a href="resume.pdf" class="key-btn" target="_blank">DOWNLOAD<br>MY CV</a>
+                <a href="https://youtu.be/x2zc3Y05_Hk?si=AuEjCnV7cluNG_5v" class="key-btn" target="_blank">YOUTUBE<br>VIDEO</a>
+            </div>
         </div>
     </header>
 
     <div class="container">
         
         <section class="section">
-            <h2>Professional Web Bio</h2>
-            [cite_start]<p>Specializing in F&B Operations, General Management, and Training across Luxury Hotels and International Cruise Lines. [cite: 22] Deep operational experience in India, the Middle East, and the USA. Expert in high-volume, premium service environments with a focus on leadership and resilience.</p>
-            
-            <div class="cv-section">
-                <a href="Nigel_Thomas_CV.pdf" class="btn-download" target="_blank">Download Full CV / Resume</a>
-            </div>
+            <h2>Professional Experience Summary</h2>
+            <ul class="exp-list">
+                <li><strong>Bangalore (6 Years):</strong> General Manager at Nandi Hills Resort and Operations Manager at KlayWorkZ Barista.</li>
+                <li><strong>Middle East (5 Years):</strong> Management roles at RAMADA, MERIDIEN, and AL HAMBRA HOTEL.</li>
+                <li><strong>International Sea (24 Years):</strong> Beverage Manager and Assistant Culinary Operations Manager on Cruise Ships.</li>
+                <li><strong>USA (6 Years):</strong> Operations management in Seattle, Miami, and Cleveland.</li>
+            </ul>
         </section>
 
         <section class="section">
-            <h2>Core Competencies</h2>
-            <ul style="column-count: 2; list-style-type: square; padding-left: 20px;">
-                <li>General Management</li>
-                <li>F&B Operations</li>
-                <li>Training & Development</li>
-                <li>Strategic Planning</li>
-                <li>P&L Management</li>
-                <li>Resort Pre-openings</li>
-            </ul>
+            <h2>Visual Portfolio</h2>
+            
+            <span class="gallery-title">Recognition & Art</span>
+            <div class="image-grid" style="grid-template-columns: 1fr 1fr;">
+                <img src="art1.png" alt="Art Picture">
+                <img src="award.jpg" alt="Award Picture">
+            </div>
+
+            <span class="gallery-title">Land Operations</span>
+            <div class="image-grid">
+                <img src="land1.jpg" alt="Land 1">
+                <img src="land2.jpg" alt="Land 2">
+                <img src="land3.jpg" alt="Land 3">
+            </div>
+
+            <span class="gallery-title">Sea Operations</span>
+            <div class="image-grid">
+                <img src="sea1.jpg" alt="Sea 1">
+                <img src="sea2.jpeg" alt="Sea 2">
+                <img src="sea3.jpeg" alt="Sea 3">
+            </div>
         </section>
+
+        <h2 style="text-align: center; color: #1a2a6c;">Employer & HR Partners</h2>
+        <div class="employer-grid">
+            <div class="cube">Slot 1: Available</div>
+            <div class="cube">Slot 2: Available</div>
+            <div class="cube">Slot 3: Available</div>
+            <div class="cube">Slot 4: Available</div>
+            <div class="cube">Slot 5: Available</div>
+            <div class="cube">Slot 6: Available</div>
+            <div class="cube">Slot 7: Available</div>
+            <div class="cube">Slot 8: Available</div>
+            <div class="cube">Slot 9: Available</div>
+            <div class="cube">Slot 10: Available</div>
+            <div class="cube">Slot 11: Available</div>
+            <div class="cube">Slot 12: Available</div>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0;">
+            <p><strong>Partner Space Inquiries: Rs. 99 PM</strong></p>
+            <a href="https://wa.me/919769351231?text=Inquiry%20regarding%20HR%20Partner%20space" 
+               style="background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block;">
+                WhatsApp Inquiry
+            </a>
+        </div>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Nigel Anthony Thomas. [cite_start]All Rights Reserved.</p> [cite: 28]
+        <p>&copy; 2026 Nigel Anthony Thomas. All Rights Reserved.</p>
     </footer>
 
 </body>
