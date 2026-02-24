@@ -1,86 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigel Anthony Thomas | Senior Hospitality Professional</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        body{font-family:'Inter',sans-serif;line-height:1.6;color:#333;margin:0;background:#f4f7f6}
+        :root {
+            --navy: #1a2a6c;
+            --gold: #f2a900;
+            --light: #f4f7f6;
+            --white: #ffffff;
+            --shadow: 0 4px 18px rgba(0,0,0,0.08);
+        }
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'DM Sans',sans-serif;line-height:1.6;color:#333;background:var(--light)}
         .container{max-width:1100px;margin:0 auto;padding:20px}
-        header{background:#1a2a6c;color:white;padding:40px 0;text-align:center;border-bottom:5px solid #f2a900}
-        .profile-img{width:150px;height:150px;border-radius:50%;border:4px solid #f2a900;margin-bottom:15px;object-fit:cover;background:#fff}
-        .keys-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:25px 0}
-        .key-btn{background:#f2a900;color:#1a2a6c;padding:12px 20px;border-radius:8px;text-align:center;font-weight:bold;font-size:0.85em;text-decoration:none;min-width:280px;flex:1 1 280px;max-width:350px;display:flex;align-items:center;justify-content:center;transition:0.3s;border:1px solid rgba(0,0,0,0.1)}
-        .key-btn:hover{background:#fff;transform:translateY(-2px);box-shadow:0 4px 8px rgba(0,0,0,0.1)}
-        .section{background:white;padding:30px;margin:25px 0;border-radius:12px;box-shadow:0 4px 6px rgba(0,0,0,0.05)}
-        h2{color:#1a2a6c;border-bottom:2px solid #f2a900;padding-bottom:10px}
-        .bio-box{max-height:450px;overflow-y:auto;padding:20px;background:#fafafa;border:1px solid #eee;border-radius:8px}
-        .cert-outer{width:100%;overflow-x:auto;background:#eee;border-radius:12px;padding:20px 0;white-space:nowrap}
-        .cert-outer::-webkit-scrollbar{height:10px}.cert-outer::-webkit-scrollbar-thumb{background:#f2a900;border-radius:10px}
-        .cert-carousel{display:inline-flex;gap:20px;padding:0 20px}
-        .cert-card{flex:0 0 280px;background:white;padding:15px;border:1px solid #ddd;border-radius:10px;text-align:center;display:inline-block;vertical-align:top;white-space:normal;box-shadow:0 2px 5px rgba(0,0,0,0.05)}
-        .cert-card img{width:100%;height:180px;object-fit:contain}
-        .port-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px;margin:15px 0}
-        .port-item{background:#fff;border:1px solid #eee;border-radius:8px;overflow:hidden;text-align:center}
-        .port-item img{width:100%;height:180px;object-fit:cover}
-        .port-item p{font-size:0.85em;font-weight:bold;color:#1a2a6c;margin:8px 0}
-        .emp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;margin:20px 0}
-        .cube{background:white;border:1px solid #ddd;border-radius:8px;min-height:160px;padding:15px;display:flex;flex-direction:column;justify-content:center;text-align:center;font-size:0.9em;box-shadow:0 2px 4px rgba(0,0,0,0.05)}
-        .cube strong{color:#1a2a6c;font-size:1.1em;display:block;margin-bottom:5px}
-        footer{text-align:center;padding:30px;color:#777;font-size:0.8em}
+
+        /* HEADER */
+        header{background:linear-gradient(135deg,#0f1d5e 0%,#1a2a6c 60%,#2a3d8f 100%);color:white;padding:50px 0 40px;text-align:center;border-bottom:5px solid var(--gold);position:relative;overflow:hidden}
+        header::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;background:rgba(242,169,0,0.07);border-radius:50%}
+        header::after{content:'';position:absolute;bottom:-80px;left:-40px;width:250px;height:250px;background:rgba(242,169,0,0.05);border-radius:50%}
+        .profile-img{width:150px;height:150px;border-radius:50%;border:4px solid var(--gold);margin-bottom:15px;object-fit:cover;background:#fff;position:relative;z-index:1}
+        header h1{font-family:'Playfair Display',serif;font-size:2.2em;letter-spacing:0.5px;position:relative;z-index:1}
+        header p{color:var(--gold);font-weight:600;font-size:1.05em;margin-top:5px;position:relative;z-index:1}
+
+        /* NAV BUTTONS */
+        .keys-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:25px 0;position:relative;z-index:1}
+        .key-btn{background:rgba(255,255,255,0.1);color:white;padding:10px 18px;border-radius:8px;text-align:center;font-weight:600;font-size:0.82em;text-decoration:none;border:1px solid rgba(255,255,255,0.25);min-width:200px;flex:1 1 200px;max-width:300px;display:flex;align-items:center;justify-content:center;transition:all 0.3s;backdrop-filter:blur(4px)}
+        .key-btn:hover{background:var(--gold);color:var(--navy);border-color:var(--gold);transform:translateY(-2px);box-shadow:0 4px 12px rgba(242,169,0,0.3)}
+
+        /* SECTIONS */
+        .section{background:white;padding:30px;margin:25px 0;border-radius:14px;box-shadow:var(--shadow)}
+        h2{font-family:'Playfair Display',serif;color:var(--navy);border-bottom:3px solid var(--gold);padding-bottom:10px;margin-bottom:20px;font-size:1.5em}
+        h3{color:var(--navy);margin:20px 0 12px;font-size:1.05em;font-weight:600}
+
+        /* BIO */
+        .bio-box{max-height:450px;overflow-y:auto;padding:20px;background:#fafafa;border:1px solid #eee;border-radius:8px;font-size:0.97em}
+        .bio-box::-webkit-scrollbar{width:6px}.bio-box::-webkit-scrollbar-thumb{background:var(--gold);border-radius:6px}
+        .bio-box p{margin-bottom:12px}
+
+        /* PORTFOLIO GRID */
+        .port-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px;margin:15px 0}
+        .port-item{background:#fff;border:1px solid #eee;border-radius:10px;overflow:hidden;text-align:center;transition:transform 0.2s,box-shadow 0.2s}
+        .port-item:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.1)}
+        .port-item img{width:100%;height:190px;object-fit:cover}
+        .port-item p{font-size:0.85em;font-weight:600;color:var(--navy);margin:10px 8px;padding-bottom:8px}
+
+        /* ── CERTIFICATES ── */
+        .cert-outer{
+            width:100%;
+            overflow-x:auto;
+            background:linear-gradient(135deg,#e8edf8,#eee);
+            border-radius:14px;
+            padding:24px 0;
+            white-space:nowrap;
+            position:relative;
+        }
+        .cert-outer::-webkit-scrollbar{height:8px}
+        .cert-outer::-webkit-scrollbar-track{background:#ddd;border-radius:10px}
+        .cert-outer::-webkit-scrollbar-thumb{background:var(--gold);border-radius:10px}
+
+        .cert-carousel{
+            display:inline-flex;
+            gap:18px;
+            padding:0 24px;
+            align-items:stretch;
+        }
+
+        .cert-card{
+            flex:0 0 240px;
+            background:white;
+            padding:12px 12px 14px;
+            border:1px solid #e0e0e0;
+            border-radius:12px;
+            text-align:center;
+            display:inline-flex;
+            flex-direction:column;
+            align-items:center;
+            box-shadow:0 3px 10px rgba(0,0,0,0.07);
+            transition:transform 0.25s,box-shadow 0.25s;
+            cursor:pointer;
+            white-space:normal;
+            vertical-align:top;
+        }
+        .cert-card:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 10px 24px rgba(0,0,0,0.13)}
+
+        .cert-card img{
+            width:100%;
+            height:160px;
+            object-fit:contain;
+            border-radius:6px;
+            background:#f9f9f9;
+            padding:4px;
+            border:1px solid #eee;
+        }
+        .cert-card p{
+            font-size:0.78em;
+            font-weight:600;
+            color:var(--navy);
+            margin-top:10px;
+            line-height:1.3;
+        }
+        .cert-badge{
+            font-size:0.68em;
+            color:#888;
+            margin-top:3px;
+        }
+
+        /* CERT COUNTER */
+        .cert-counter{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            margin-bottom:14px;
+        }
+        .cert-counter .count{
+            background:var(--gold);
+            color:var(--navy);
+            font-weight:700;
+            font-size:1.1em;
+            padding:4px 14px;
+            border-radius:20px;
+        }
+        .cert-counter span{color:#666;font-size:0.9em}
+
+        /* LIGHTBOX */
+        .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.88);z-index:9999;align-items:center;justify-content:center;padding:20px}
+        .lightbox.active{display:flex}
+        .lightbox img{max-width:90vw;max-height:88vh;border-radius:10px;box-shadow:0 0 40px rgba(0,0,0,0.5)}
+        .lightbox-close{position:fixed;top:18px;right:22px;color:white;font-size:2.2em;cursor:pointer;font-weight:700;line-height:1;z-index:10000}
+        .lightbox-close:hover{color:var(--gold)}
+
+        /* SCROLL HINT */
+        .scroll-hint{text-align:center;color:#888;font-size:0.78em;margin-top:10px;letter-spacing:0.5px}
+
+        /* EMPLOYERS */
+        .emp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px;margin:20px 0}
+        .cube{background:white;border:1px solid #ddd;border-radius:10px;min-height:160px;padding:18px;display:flex;flex-direction:column;justify-content:center;text-align:center;font-size:0.9em;box-shadow:var(--shadow);transition:box-shadow 0.2s}
+        .cube:hover{box-shadow:0 6px 18px rgba(0,0,0,0.1)}
+        .cube strong{color:var(--navy);font-size:1.05em;display:block;margin-bottom:5px}
+        .cube a{color:var(--navy);font-weight:600}
+
+        /* PARTNER BTN */
+        .partner-btn{background:#25D366;color:white;padding:15px 35px;text-decoration:none;border-radius:50px;font-weight:bold;display:inline-block;transition:all 0.3s;box-shadow:0 4px 14px rgba(37,211,102,0.35)}
+        .partner-btn:hover{background:#1fb85a;transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,0.45)}
+
+        footer{text-align:center;padding:30px;color:#999;font-size:0.8em}
+
+        @media(max-width:600px){
+            header h1{font-size:1.5em}
+            .cert-card{flex:0 0 200px}
+            .cert-card img{height:130px}
+        }
     </style>
 </head>
 <body>
-<header><div class="container"><img src="profile.png" class="profile-img"><h1>Nigel Anthony Thomas</h1><p>Hospitality & F&B Operations Manager</p>
-<div class="keys-nav">
-<a href="https://wa.me/919769351231" class="key-btn">CEL/WA: +919769351231</a>
-<a href="mailto:napt1952@gmail.com" class="key-btn">EMAIL: napt1952@gmail.com</a>
-<a href="mailto:restgenmgr1952@gmail.com" class="key-btn">EMAIL: restgenmgr1952@gmail.com</a>
-<a href="https://www.linkedin.com/in/nathomas-hospitality" class="key-btn" target="_blank">LINKEDIN</a>
-<a href="https://www.facebook.com/FoodBeverageMgr/" class="key-btn" target="_blank">FACEBOOK</a>
-<a href="resume.pdf" class="key-btn" target="_blank">DOWNLOAD CV</a>
-<a href="https://youtu.be/x2zc3Y05_Hk" class="key-btn" target="_blank">YOUTUBE VIDEO</a>
-</div></div></header>
+
+<!-- HEADER -->
+<header>
+    <div class="container">
+        <img src="profile.png" class="profile-img" alt="Nigel Anthony Thomas">
+        <h1>Nigel Anthony Thomas</h1>
+        <p>Hospitality &amp; F&amp;B Operations Manager</p>
+        <div class="keys-nav">
+            <a href="https://wa.me/919769351231" class="key-btn">📱 CEL/WA: +919769351231</a>
+            <a href="mailto:napt1952@gmail.com" class="key-btn">✉️ napt1952@gmail.com</a>
+            <a href="mailto:restgenmgr1952@gmail.com" class="key-btn">✉️ restgenmgr1952@gmail.com</a>
+            <a href="https://www.linkedin.com/in/nathomas-hospitality" class="key-btn" target="_blank">💼 LINKEDIN</a>
+            <a href="https://www.facebook.com/FoodBeverageMgr/" class="key-btn" target="_blank">📘 FACEBOOK</a>
+            <a href="resume.pdf" class="key-btn" target="_blank">📄 DOWNLOAD CV</a>
+            <a href="https://youtu.be/x2zc3Y05_Hk" class="key-btn" target="_blank">▶️ YOUTUBE VIDEO</a>
+        </div>
+    </div>
+</header>
+
 <div class="container">
-<section class="section"><h2>My Executive Narrative</h2><div class="bio-box">
-<p>I am a hospitality leader with over 24 years of global experience. My career reflects a consistent trajectory of growth across India, the Middle East, the United States, and international waters. I specialize in beverage operations, large-scale service, and leading multicultural teams.</p>
-<p>In Bangalore, I served as GM at Nandi Hills Resort and Ops Manager at KlayWorkZ Barista. My Middle East experience includes Ramada and Le Méridien. I spent 20+ years at sea as Beverage Manager and Assistant Culinary Ops Manager on luxury cruise lines, managing complex, high-volume operations.</p>
-</div></section>
-<section class="section"><h2>Work Portfolio</h2>
-<h3>Recognition & Art</h3>
-<div class="port-grid" style="grid-template-columns:1fr 1fr;">
-<div class="port-item"><img src="award.jpg"><p>Bombatt Certified Excellence Award</p></div>
-<div class="port-item"><img src="art1.png"><p>Professional Hospitality Art</p></div>
+
+    <!-- BIO -->
+    <section class="section">
+        <h2>My Executive Narrative</h2>
+        <div class="bio-box">
+            <p>I am a hospitality leader with over 24 years of global experience. My career reflects a consistent trajectory of growth across India, the Middle East, the United States, and international waters. I specialize in beverage operations, large-scale service, and leading multicultural teams.</p>
+            <p>In Bangalore, I served as GM at Nandi Hills Resort and Ops Manager at KlayWorkZ Barista. My Middle East experience includes Ramada and Le Méridien. I spent 20+ years at sea as Beverage Manager and Assistant Culinary Ops Manager on luxury cruise lines, managing complex, high-volume operations.</p>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section">
+        <h2>Work Portfolio</h2>
+        <h3>Recognition &amp; Art</h3>
+        <div class="port-grid" style="grid-template-columns:1fr 1fr;">
+            <div class="port-item"><img src="award.jpg" alt="Bombatt Award"><p>Bombatt Certified Excellence Award</p></div>
+            <div class="port-item"><img src="art1.png" alt="Hospitality Art"><p>Professional Hospitality Art</p></div>
+        </div>
+        <h3>International Sea Operations</h3>
+        <div class="port-grid">
+            <div class="port-item"><img src="sea1.jpg" alt="HAL"><p>Ship Operations - Holland America Line (HAL)</p></div>
+            <div class="port-item"><img src="sea2.jpeg" alt="RCCL"><p>Pool Deck - Royal Caribbean (RCCL)</p></div>
+            <div class="port-item"><img src="sea3.jpeg" alt="Lido"><p>Dining Management - Lido Deck</p></div>
+        </div>
+        <h3>Global Land Operations</h3>
+        <div class="port-grid">
+            <div class="port-item"><img src="land1.jpg" alt="Beach View"><p>Land Ops 1 - Beach View</p></div>
+            <div class="port-item"><img src="land2.jpg" alt="Penthouse"><p>Land Ops 2 - Penthouse Villa</p></div>
+            <div class="port-item"><img src="land3.jpg" alt="Kitchen"><p>Land Ops 3 - Hot Kitchen</p></div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="section">
+        <h2>Professional Certifications</h2>
+        <div class="cert-counter">
+            <span class="count">14</span>
+            <span>Verified Certifications — scroll to view all &nbsp;→</span>
+        </div>
+        <div class="cert-outer">
+            <div class="cert-carousel">
+
+                <div class="cert-card" onclick="openLightbox('c1.jpeg')">
+                    <img src="c1.jpeg" alt="Certified Hospitality Supervisor">
+                    <p>Certified Hospitality Supervisor</p>
+                    <span class="cert-badge">AH&amp;LA Educational Institute • 2002</span>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox('c2.png')">
+                    <img src="c2.png" alt="Leadership Skills">
+                    <p>Leadership Skills — Carnival College of Management</p>
+                    <span class="cert-badge">Carnival Cruise Lines • 2006</span>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox('c3.png')">
+                    <img src="c3.png" alt="Guest Service Management">
+                    <p>Guest Service Management Training Program</p>
+                    <span class="cert-badge">Apollo Ship Chandlers / Johnson &amp; Wales • 1996</span>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox('c4.png')">
+                    <img src="c4.png" alt="F&B Control">
+                    <p>Planning &amp; Control of Food &amp; Beverage Operations</p>
+                    <span class="cert-badge">AH&amp;LA Educational Institute • 2002</span>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox('c5.png')">
+                    <img src="c5.png" alt="F&B Specialization">
+                    <p>Certificate of Specialization — Food &amp; Beverage Management</p>
+                    <span class="cert-badge">AH&amp;LA Educational Institute • 2001</span>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox('c6.jpeg')">
+                    <img src="c6.jpeg" alt="F&B Ops Management">
+                    <p>Certificate of Specialization — F&amp;B Management (B&amp;W Copy)</p>
+                    <span class="cert-badge">AH&amp;LA Educational Institute • 2001</span>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox('c7.png')">
+                    <img src="c7.png" alt="ServSafe Certification">
+                    <p>ServSafe Food Protection Manager Certification</p>
+                    <span class="cert-badge">National Restaurant Association • 2017</span>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox('c8.jpeg')">
+                    <img src="c8.jpeg" alt="Food Safety Standards">
+                    <p>Certificate of Specialization — Food &amp; Beverage Management, CHS</p>
+                    <span class="cert-badge">AH&amp;LA Educational Institute • 2001</span>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox('c9.jpeg')">
+                    <img src="c9.jpeg" alt="Vessel Sanitation">
+                    <p>Vessel Sanitation Management Course</p>
+                    <span class="cert-badge">CDC / Nova Southeastern University • 1995</span>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox('c10.jpeg')">
+                    <img src="c10.jpeg" alt="Advanced Supervision">
+                    <p>Certified Hospitality Supervisor (Advanced Copy)</p>
+                    <span class="cert-badge">AH&amp;LA Educational Institute • 2002</span>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox('c11.jpeg')">
+                    <img src="c11.jpeg" alt="Beverage Sales Seminar">
+                    <p>Certificate of Achievement — Beverage Sales &amp; Service Seminar</p>
+                    <span class="cert-badge">World Duty Free / Robert Mondavi / Anheuser-Busch • 1999</span>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox('c12.jpeg')">
+                    <img src="c12.jpeg" alt="Professional Development">
+                    <p>Carnival College of Management — Leadership Training</p>
+                    <span class="cert-badge">Carnival Cruise Lines • 2006</span>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox('c13.jpg')">
+                    <img src="c13.jpg" alt="Excel & AI Workshop">
+                    <p>Microsoft Excel Using AI Workshop</p>
+                    <span class="cert-badge">OfficeMaster • Nov 2025</span>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox('c14.png')">
+                    <img src="c14.png" alt="AI & ChatGPT Training">
+                    <p>AI Tools &amp; ChatGPT Workshop</p>
+                    <span class="cert-badge">be10x • Nov 2025</span>
+                </div>
+
+            </div>
+        </div>
+        <p class="scroll-hint">← Scroll horizontally to view all 14 certificates &nbsp;|&nbsp; Click any certificate to enlarge →</p>
+    </section>
+
+    <!-- EMPLOYERS -->
+    <section class="section">
+        <h2>Employers &amp; HR Partners</h2>
+        <div class="emp-grid">
+            <div class="cube">
+                <strong>Mr. Sudhit Tiwari</strong>
+                Placement Agent<br>Cel: +91 70515 04844<br>Hungary · UK · East Europe<br><br>
+                <strong>SERVICE CHARGES APPLICABLE<br>VISA: 45 DAYS</strong>
+            </div>
+            <div class="cube">
+                <strong>Das — AI Generalist</strong>
+                <a href="https://tinyurl.com/aioperation" target="_blank">View Portfolio</a><br>
+                Cel: +91 83693 72112<br>AI Projects &amp; Global Support
+            </div>
+            <div class="cube" style="color:#aaa;font-style:italic;">Slot 3: Available</div>
+            <div class="cube" style="color:#aaa;font-style:italic;">Slot 4: Available</div>
+        </div>
+        <div style="text-align:center;margin:40px 0;">
+            <a href="https://wa.me/919769351231" class="partner-btn">💬 Partner Space Inquiry @ Rs. 99 PM</a>
+        </div>
+    </section>
+
 </div>
-<h3>International Sea Operations</h3>
-<div class="port-grid">
-<div class="port-item"><img src="sea1.jpg"><p>Ship Operations - Holland America Line (HAL)</p></div>
-<div class="port-item"><img src="sea2.jpeg"><p>Pool Deck - Royal Caribbean (RCCL)</p></div>
-<div class="port-item"><img src="sea3.jpeg"><p>Dining Management - Lido Deck</p></div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+    <img id="lightbox-img" src="" alt="Certificate">
 </div>
-<h3>Global Land Operations</h3>
-<div class="port-grid">
-<div class="port-item"><img src="land1.jpg"><p>Land Ops 1 - Beach View</p></div>
-<div class="port-item"><img src="land2.jpg"><p>Land Ops 2 - Penthouse Villa</p></div>
-<div class="port-item"><img src="land3.jpg"><p>Land Ops 3 - Hot Kitchen</p></div>
-</div></section>
-<section class="section"><h2>Professional Certifications (14 Items)</h2>
-<div class="cert-outer"><div class="cert-carousel">
-<div class="cert-card"><img src="c1.jpeg"><p>Certified Supervisor</p></div><div class="cert-card"><img src="c2.jpg"><p>Leadership Skills</p></div>
-<div class="cert-card"><img src="c3.jpg"><p>Guest Service Mgmt</p></div><div class="cert-card"><img src="c4.jpg"><p>F&B Control</p></div>
-<div class="cert-card"><img src="c5.jpg"><p>F&B Specialization</p></div><div class="cert-card"><img src="c6.jpeg"><p>F&B Ops Mgmt</p></div>
-<div class="cert-card"><img src="c7.jpg"><p>ServSafe Certification</p></div><div class="cert-card"><img src="c8.jpeg"><p>Food Safety Standards</p></div>
-<div class="cert-card"><img src="c9.jpeg"><p>Vessel Sanitation</p></div><div class="cert-card"><img src="c10.jpeg"><p>Adv Supervision</p></div>
-<div class="cert-card"><img src="c11.png"><p>FSSAI Seminar</p></div><div class="cert-card"><img src="c12.png"><p>Pro Development</p></div>
-<div class="cert-card"><img src="c13.jpg"><p>Excel & AI Workshop</p></div><div class="cert-card"><img src="c14.png"><p>AI & ChatGPT Training</p></div>
-</div></div></section>
-<h2 style="text-align:center;">Employers & HR Partners</h2>
-<div class="emp-grid">
-<div class="cube"><strong>Mr. Sudhit Tiwari</strong>Placement Agent<br>Cel: +91 70515 04844<br>Hungary-UK-East Europe<br><strong>SERVICE CHARGES APPLICABLE<br>VISA: 45 DAYS</strong></div>
-<div class="cube"><strong>Das</strong>AI Generalist<br><a href="https://tinyurl.com/aioperation" target="_blank" style="color:#1a2a6c;font-weight:bold;">View Portfolio</a><br>Cel: +91 83693 72112<br>AI Projects & Global Support</div>
-<div class="cube">Slot 3: Available</div><div class="cube">Slot 4: Available</div>
-</div>
-<div style="text-align:center;margin:40px 0;"><a href="https://wa.me/919769351231" style="background:#25D366;color:white;padding:15px 35px;text-decoration:none;border-radius:50px;font-weight:bold;display:inline-block;">Partner Space Inquiry @ Rs. 99 PM</a></div>
-</div>
+
 <footer><p>&copy; 2026 Nigel Anthony Thomas. All Rights Reserved.</p></footer>
-</body></html>
+
+<script>
+    function openLightbox(src){
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(){
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown',function(e){if(e.key==='Escape') closeLightbox();});
+</script>
+
+</body>
+</html>
