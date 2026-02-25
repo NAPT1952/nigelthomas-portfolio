@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nigel Anthony Thomas | Senior Hospitality Professional</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#1a2a6c;--gold:#f2a900;--light:#f4f7f6;--sh:0 4px 18px rgba(0,0,0,0.08)}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;line-height:1.6;color:#333;background:var(--light);padding-bottom:120px;}
-.wrap{max-width:1100px;margin:0 auto;padding:20px}
-header{background:linear-gradient(135deg,#0f1d5e,#1a2a6c 60%,#2a3d8f);color:#fff;padding:50px 0 40px;text-align:center;border-bottom:5px solid var(--gold)}
-.avatar{width:150px;height:150px;border-radius:50%;border:4px solid var(--gold);margin-bottom:15px;object-fit:cover;background:#fff}
-header h1{font-family:'Playfair Display',serif;font-size:2.2em}
-header .sub{color:var(--gold);font-weight:600;font-size:1.05em;margin-top:5px}
-.nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:25px 0}
-.btn{background:rgba(255,255,255,0.1);color:#fff;padding:10px 18px;border-radius:8px;font-weight:600;font-size:0.82em;text-decoration:none;border:1px solid rgba(255,255,255,0.25);min-width:190px;flex:1 1 190px;max-width:290px;display:flex;align-items:center;justify-content:center;transition:.3s}
-.btn:hover{background:var(--gold);color:var(--navy);border-color:var(--gold);transform:translateY(-2px)}
-.sec{background:#fff;padding:30px;margin:25px 0;border-radius:14px;box-shadow:var(--sh)}
-h2{font-family:'Playfair Display',serif;color:var(--navy);border-bottom:3px solid var(--gold);padding-bottom:10px;margin-bottom:20px;font-size:1.5em}
-.exp-item{margin-bottom:25px;border-left:4px solid var(--gold);padding-left:15px}
-.exp-item h3{color:var(--navy);font-size:1.2em}
-.exp-date{color:#666;font-size:0.9em;font-weight:bold}
-.cgrid{display:grid;grid-template-columns:repeat(auto-fill, minmax(160px, 1fr));gap:20px;margin-top:20px}
-.ccard{background:#fff;border:1px solid #eee;border-radius:12px;padding:10px;text-align:center;transition:.3s}
-.ccard img{width:100%;height:120px;object-fit:contain;margin-bottom:10px}
-.traffic-bar{background:#111d4a;color:#fff;padding:15px 20px;display:flex;justify-content:center;align-items:center;gap:35px;width:100%;position:fixed;bottom:0;left:0;z-index:9999;border-top:3px solid var(--gold)}
-.traffic-num{font-size:2.8rem!important;font-weight:bold;color:var(--gold);line-height:1}
-.traffic-label{font-size:0.85rem;color:rgba(255,255,255,0.8);text-transform:uppercase}
-.traffic-bar img{width:70px;height:70px;border-radius:50%;border:2px solid var(--gold);object-fit:cover}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigel Anthony Thomas | Senior Hospitality Professional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--navy:#1a2a6c;--gold:#f2a900;--light:#f4f7f6;--sh:0 4px 18px rgba(0,0,0,0.08)}
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'DM Sans',sans-serif;line-height:1.6;color:#333;background:var(--light);padding-bottom:120px;}
+        .wrap{max-width:1100px;margin:0 auto;padding:20px}
+        header{background:linear-gradient(135deg,#0f1d5e,#1a2a6c 60%,#2a3d8f);color:#fff;padding:50px 0 40px;text-align:center;border-bottom:5px solid var(--gold)}
+        .avatar{width:150px;height:150px;border-radius:50%;border:4px solid var(--gold);margin-bottom:15px;object-fit:cover;background:#fff}
+        header h1{font-family:'Playfair Display',serif;font-size:2.2em}
+        header .sub{color:var(--gold);font-weight:600;font-size:1.05em;margin-top:5px}
+        .nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:25px 0}
+        .btn{background:rgba(255,255,255,0.1);color:#fff;padding:10px 18px;border-radius:8px;font-weight:600;font-size:0.82em;text-decoration:none;border:1px solid rgba(255,255,255,0.25);min-width:190px;flex:1 1 190px;max-width:290px;display:flex;align-items:center;justify-content:center;transition:.3s}
+        .btn:hover{background:var(--gold);color:var(--navy);border-color:var(--gold);transform:translateY(-2px)}
+        .sec{background:#fff;padding:30px;margin:25px 0;border-radius:14px;box-shadow:var(--sh)}
+        h2{font-family:'Playfair Display',serif;color:var(--navy);border-bottom:3px solid var(--gold);padding-bottom:10px;margin-bottom:20px;font-size:1.5em}
+        .exp-item{margin-bottom:25px;border-left:4px solid var(--gold);padding-left:15px}
+        .exp-item h3{color:var(--navy);font-size:1.2em}
+        .exp-date{color:#666;font-size:0.9em;font-weight:bold}
+        
+        /* Grid for Certificates and Pictures */
+        .cgrid{display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:20px;margin-top:20px}
+        .ccard{background:#fff;border:1px solid #eee;border-radius:12px;padding:15px;text-align:center;transition:.3s;box-shadow: 0 2px 10px rgba(0,0,0,0.05)}
+        .ccard img{width:100%;height:auto;border-radius:8px;margin-bottom:10px;display:block}
+        .cert-img{height:120px!important;object-fit:contain!important}
+
+        /* Traffic Bar at bottom */
+        .traffic-bar{background:#111d4a;color:#fff;padding:15px 20px;display:flex;justify-content:center;align-items:center;gap:35px;width:100%;position:fixed;bottom:0;left:0;z-index:9999;border-top:3px solid var(--gold)}
+        .traffic-num{font-size:1.8rem;font-weight:bold;color:var(--gold);line-height:1}
+        .traffic-label{font-size:0.75rem;color:rgba(255,255,255,0.8);text-transform:uppercase}
+        .traffic-bar img{width:50px;height:50px;border-radius:50%;border:2px solid var(--gold);object-fit:cover}
+    </style>
 </head>
 <body>
 
@@ -39,11 +44,9 @@ h2{font-family:'Playfair Display',serif;color:var(--navy);border-bottom:3px soli
         <h1>NIGEL ANTHONY THOMAS</h1>
         <p class="sub">Senior Hospitality & F&B Operations Manager</p>
         <div class="nav">
-            <a href="https://wa.me/919769351231" class="btn">📱 CEL/WA: +919769351231</a>
+            <a href="https://wa.me/919769351231" class="btn">📱 +91 97693 51231</a>
             <a href="mailto:napt1952@gmail.com" class="btn">✉️ napt1952@gmail.com</a>
-            <a href="mailto:restgenmgr1952@gmail.com" class="btn">✉️ restgenmgr1952@gmail.com</a>
             <a href="https://www.linkedin.com/in/nathomas-hospitality" class="btn" target="_blank">💼 LINKEDIN</a>
-            <a href="https://www.facebook.com/FoodBeverageMgr/" class="btn" target="_blank">📖 FACEBOOK</a>
             <a href="resume.pdf" class="btn" target="_blank">📄 DOWNLOAD CV</a>
             <a href="https://youtu.be/x2zc3Y05_Hk" class="btn" target="_blank">▶️ YOUTUBE VIDEO</a>
         </div>
@@ -64,52 +67,73 @@ h2{font-family:'Playfair Display',serif;color:var(--navy);border-bottom:3px soli
             <p>Directed day-to-day F&B operations focusing on profitability and customer satisfaction.</p>
         </div>
         <div class="exp-item">
-            <h3>Restaurant Operations Manager – KlayWorkZ Barista</h3>
-            <p class="exp-date">Bangalore | Apr 2020 – Oct 2022</p>
-            <p>Managed dual locations; implemented SOPs, HACCP plans, and staff training.</p>
-        </div>
-        <div class="exp-item">
             <h3>Hospitality Management – International Cruise Ships</h3>
             <p class="exp-date">International Waters | 20+ Years</p>
-            <p>Served in management positions on international luxury cruise ships.</p>
-        </div>
-        <div class="exp-item">
-            <h3>Middle East & USA Management Roles</h3>
-            <p class="exp-date">Ramada, Meridien, Al Hambra | 11 Years Total</p>
-            <p>6 years in the USA (Seattle/Miami/Cleveland) and 5 years in Middle East 5-star hotels.</p>
+            <p>Senior leadership roles with Carnival and Royal Caribbean across global routes.</p>
         </div>
     </section>
 
     <section class="sec">
-        <h2>14 Professional Certifications</h2>
+        <h2>Recognition & Aesthetic Vision</h2>
         <div class="cgrid">
-            <div class="ccard"><img src="be10x.jpg"><div>AI & ChatGPT</div></div>
-            <div class="ccard"><img src="servsafe.png"><div>ServSafe Manager</div></div>
-            <div class="ccard"><img src="wset.png"><div>WSET Level 2</div></div>
-            <div class="ccard"><img src="haccp.png"><div>HACCP Compliance</div></div>
-            <div class="ccard"><img src="culinary.png"><div>Culinary Arts</div></div>
-            <div class="ccard"><img src="ships.jpg"><div>Cruise Ops</div></div>
+            <div class="ccard">
+                <img src="award.jpg" alt="Excellence in Leadership">
+                <div><strong>Excellence in Leadership Award</strong></div>
             </div>
+            <div class="ccard">
+                <img src="art.jpg" alt="Infrastructure Design">
+                <div><strong>Artistic Direction & Infrastructure</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec">
+        <h2>Maritime & Land-Based Operations</h2>
+        <div class="cgrid">
+            <div class="ccard">
+                <img src="ships.jpg" alt="Cruise Operations">
+                <div><strong>Global Maritime Leadership</strong></div>
+            </div>
+            <div class="ccard">
+                <img src="land.jpg" alt="Luxury Land Assets">
+                <div><strong>USA & Middle East Luxury Mgmt</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec">
+        <h2>Professional Certifications</h2>
+        <div class="cgrid" style="grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));">
+            <div class="ccard"><img src="be10x.jpg" class="cert-img"><div>AI & ChatGPT</div></div>
+            <div class="ccard"><img src="servsafe.png" class="cert-img"><div>ServSafe Manager</div></div>
+            <div class="ccard"><img src="wset.png" class="cert-img"><div>WSET Level 2</div></div>
+            <div class="ccard"><img src="haccp.png" class="cert-img"><div>HACCP Compliance</div></div>
+            <div class="ccard"><img src="culinary.png" class="cert-img"><div>Culinary Arts</div></div>
+        </div>
     </section>
 </div>
 
 <div class="traffic-bar">
     <div style="display:flex; align-items:center; gap:12px;">
-        <img src="Sudhir Tiwari.jpg">
+        <img src="Sudhir Tiwari.jpg" alt="Sudhir Tiwari">
         <div style="display:flex; flex-direction:column;">
-            <span class="traffic-num">53</span>
-            <span class="traffic-label">Today</span>
+            <span class="traffic-label" style="color:var(--gold); font-weight:bold;">Mr. Sudhir Tiwari</span>
+            <span class="traffic-label">Placement Agent</span>
         </div>
     </div>
-    <div style="display:flex; flex-direction:column;">
-        <span class="traffic-num">118</span>
-        <span class="traffic-label">This Week</span>
-    </div>
+
     <div style="display:flex; align-items:center; gap:12px;">
-        <img src="0cf818f7-402a-4e59-ae2a-4f948995aef1.jfif">
+        <div style="display:flex; flex-direction:column; text-align:center;">
+            <span class="traffic-label" style="color:var(--gold); font-weight:bold;">Das Raj</span>
+            <span class="traffic-label"><a href="https://tinyurl.com/aioperation" target="_blank" style="color:#fff;">AI Generalist</a></span>
+        </div>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:12px;">
+        <img src="0cf818f7-402a-4e59-ae2a-4f948995aef1.jfif" alt="Tony Dcrux">
         <div style="display:flex; flex-direction:column;">
-            <span class="traffic-num"><a href="https://tinyurl.com/TDMumbai" target="_blank" style="color:var(--gold); text-decoration:none;">Tony</a></span>
-            <span class="traffic-label">House Manager</span>
+            <span class="traffic-label" style="color:var(--gold); font-weight:bold;">Tony Dcrux</span>
+            <span class="traffic-label"><a href="https://tinyurl.com/TDMumbai" target="_blank" style="color:#fff;">House Manager</a></span>
         </div>
     </div>
 </div>
