@@ -1,148 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nigel Anthony Thomas | Senior Hospitality Professional</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#1a2a6c;--gold:#f2a900;--light:#f4f7f6;--sh:0 4px 18px rgba(0,0,0,0.08)}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;line-height:1.6;color:#333;background:var(--light)}
-.wrap{max-width:1100px;margin:0 auto;padding:20px}
-/* HEADER */
-header{background:linear-gradient(135deg,#0f1d5e,#1a2a6c 60%,#2a3d8f);color:#fff;padding:50px 0 40px;text-align:center;border-bottom:5px solid var(--gold)}
-.avatar{width:150px;height:150px;border-radius:50%;border:4px solid var(--gold);margin-bottom:15px;object-fit:cover;background:#fff}
-header h1{font-family:'Playfair Display',serif;font-size:2.2em}
-header .sub{color:var(--gold);font-weight:600;font-size:1.05em;margin-top:5px}
-.nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:25px 0}
-.btn{background:rgba(255,255,255,0.1);color:#fff;padding:10px 18px;border-radius:8px;font-weight:600;font-size:0.82em;text-decoration:none;border:1px solid rgba(255,255,255,0.25);min-width:190px;flex:1 1 190px;max-width:290px;display:flex;align-items:center;justify-content:center;transition:.3s}
-.btn:hover{background:var(--gold);color:var(--navy);border-color:var(--gold);transform:translateY(-2px)}
-/* SECTIONS */
-.sec{background:#fff;padding:30px;margin:25px 0;border-radius:14px;box-shadow:var(--sh)}
-h2{font-family:'Playfair Display',serif;color:var(--navy);border-bottom:3px solid var(--gold);padding-bottom:10px;margin-bottom:20px;font-size:1.5em}
-h3{color:var(--navy);margin:20px 0 12px;font-size:1.05em;font-weight:600}
-.bio{max-height:400px;overflow-y:auto;padding:20px;background:#fafafa;border:1px solid #eee;border-radius:8px;font-size:.97em}
-.bio::-webkit-scrollbar{width:6px}.bio::-webkit-scrollbar-thumb{background:var(--gold);border-radius:6px}
-.bio p{margin-bottom:12px}
-/* PORTFOLIO */
-.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px;margin:15px 0}
-.pitem{background:#fff;border:1px solid #eee;border-radius:10px;overflow:hidden;text-align:center;transition:.2s}
-.pitem:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.1)}
-.pitem img{width:100%;height:185px;object-fit:cover}
-.pitem p{font-size:.85em;font-weight:600;color:var(--navy);margin:10px 8px 10px}
-/* CERTIFICATES */
-.cbadge{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;padding:3px 14px;border-radius:20px;font-size:1em;margin-bottom:12px}
-.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-@media(max-width:860px){.cgrid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:580px){.cgrid{grid-template-columns:repeat(2,1fr)}}
-.ccard{background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:10px;text-align:center;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,0.07);transition:.25s;display:flex;flex-direction:column;align-items:center}
-.ccard:hover{transform:translateY(-4px);box-shadow:0 10px 22px rgba(0,0,0,0.12)}
-.ccard img{width:100%;height:140px;object-fit:contain;border-radius:6px;background:#f9f9f9;padding:3px;border:1px solid #eee}
-.ccard .ct{font-size:.74em;font-weight:600;color:var(--navy);margin-top:8px;line-height:1.3}
-.ccard .cb{font-size:.64em;color:#999;margin-top:3px}
-/* LIGHTBOX */
-.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column;padding:20px}
-.lb.on{display:flex}
-.lb img{max-width:90vw;max-height:82vh;border-radius:10px;box-shadow:0 0 40px rgba(0,0,0,.5)}
-.lbx{position:fixed;top:16px;right:20px;color:#fff;font-size:1.5em;cursor:pointer;background:rgba(255,255,255,.15);width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:10000}
-.lbx:hover{background:var(--gold);color:var(--navy)}
-.lbc{color:#fff;margin-top:12px;font-size:.88em;text-align:center}
-/* EMPLOYERS */
-.egrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px;margin:20px 0}
-.cube{background:#fff;border:1px solid #ddd;border-radius:10px;min-height:150px;padding:18px;display:flex;flex-direction:column;justify-content:center;text-align:center;font-size:.9em;box-shadow:var(--sh)}
-.cube strong{color:var(--navy);font-size:1.05em;display:block;margin-bottom:5px}
-.cube a{color:var(--navy);font-weight:600}
-.wbtn{background:#25D366;color:#fff;padding:14px 34px;text-decoration:none;border-radius:50px;font-weight:700;display:inline-block;transition:.3s;box-shadow:0 4px 14px rgba(37,211,102,.35)}
-.wbtn:hover{background:#1fb85a;transform:translateY(-2px)}
-footer{text-align:center;padding:28px;color:#999;font-size:.8em}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Counter Bar</title>
+    <style>
+        /* MAIN BAR STYLING */
+        .traffic-bar {
+            background: #111d4a;
+            color: #fff;
+            padding: 15px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            min-height: 100px;
+            border-top: 3px solid #f2a900;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 9999;
+            font-family: Arial, sans-serif;
+        }
 
+        .traffic-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
+        .traffic-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-/* --- TRAFFIC COUNTER STYLES --- */
-/* --- TRAFFIC COUNTER STYLES --- */
-    .traffic-bar {
-      background: #111d4a;
-      color: #fff;
-      padding: 20px 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      min-height: 100px;
-      border-top: 3px solid #f2a900;
-      width: 100%;
-    }
+        /* BIG NUMBERS FOR MEYERS */
+        .traffic-num {
+            font-size: 2.8rem !important;
+            font-weight: bold;
+            color: #f2a900;
+            line-height: 1;
+            margin-bottom: 2px;
+        }
 
-    .traffic-item {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
+        .traffic-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            display: block;
+        }
 
-    .traffic-num {
-      font-size: 2.2rem !important; /* Huge numbers for "Meyers" */
-      font-weight: bold;
-      color: #f2a900;
-      line-height: 1;
-    }
+        .traffic-bar img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #f2a900;
+        }
 
-    .traffic-label {
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.8);
-      text-transform: uppercase;
-      display: block;
-    }
+        .traffic-divider {
+            width: 1px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+        }
 
-    .traffic-bar img {
-      width: 65px; /* Large, clear profile photos */
-      height: 65px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #f2a900;
-    }
+        .live-dot {
+            width: 12px;
+            height: 12px;
+            background: #4caf50;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            animation: blink 2s infinite;
+        }
 
-    .traffic-divider {
-      width: 1px;
-      height: 50px;
-      background: rgba(255, 255, 255, 0.2);
-    }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
 
-    .live-dot {
-      width: 12px;
-      height: 12px;
-      background: #4caf50;
-      border-radius: 50%;
-      display: inline-block;
-      animation: blink 2s infinite;
-    }
+        a.tony-link {
+            color: #f2a900;
+            text-decoration: none;
+            transition: 0.3s;
+        }
 
-    @keyframes blink {
-      0% { opacity: 1; }
-      50% { opacity: 0.3; }
-      100% { opacity: 1; }
-    }
-</style>
+        a.tony-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<body style="margin:0; padding:0;">
+<body>
+
+<div style="padding: 20px; text-align: center; color: #333;">
+    <h1>Welcome to the Dashboard</h1>
+    <p>The traffic counter bar is fixed at the bottom.</p>
+</div>
 
 <div class="traffic-bar">
-   <div class="traffic-bar">
     <div class="traffic-item">
         <img src="Sudhir Tiwari.jpg" alt="Sudhir">
-        <div style="display: flex; flex-direction: column;">
+        <div class="traffic-column">
             <span class="traffic-num" id="tc-today">53</span>
-            <span class="traffic-label">TODAY</span>
+            <span class="traffic-label">Today</span>
         </div>
     </div>
 
     <div class="traffic-divider"></div>
 
     <div class="traffic-item">
-        <div style="display: flex; flex-direction: column;">
+        <div class="traffic-column">
             <span class="traffic-num" id="tc-week">118</span>
-            <span class="traffic-label">THIS WEEK</span>
+            <span class="traffic-label">This Week</span>
         </div>
     </div>
 
@@ -150,12 +123,19 @@ footer{text-align:center;padding:28px;color:#999;font-size:.8em}
 
     <div class="traffic-item">
         <img src="0cf818f7-402a-4e59-ae2a-4f948995aef1.jfif" alt="Tony">
-        <div style="display: flex; flex-direction: column;">
+        <div class="traffic-column">
             <span class="traffic-num">
-                <a href="https://tinyurl.com/TDMumbai" target="_blank" style="color:#f2a900; text-decoration:none;">Tony Dcruz</a>
+                <a href="https://tinyurl.com/TDMumbai" target="_blank" class="tony-link">Tony Dcruz</a>
             </span>
-            <span class="traffic-label">HOUSE MANAGER</span>
+            <span class="traffic-label">House Manager</span>
         </div>
+    </div>
+
+    <div class="traffic-divider"></div>
+
+    <div class="traffic-item">
+        <span class="live-dot"></span>
+        <span class="traffic-label" style="letter-spacing: 1px;">Live Visitor Counter</span>
     </div>
 </div>
 
