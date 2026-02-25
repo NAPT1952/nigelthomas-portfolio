@@ -59,17 +59,96 @@ footer{text-align:center;padding:28px;color:#999;font-size:.8em}
 
 
 
-/* TRAFFIC COUNTER */
-.traffic-bar {
-  background: #111d4a;
-  color: #fff;
-  padding: 15px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  min-height: 70px;
+/* TRAFFIC COUNTER STYLES */
+    .traffic-bar {
+      background: #111d4a;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      min-height: 80px;
+    }
+
+    .traffic-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .traffic-num {
+      font-size: 1.6rem; /* Large, readable Meyers */
+      font-weight: bold;
+      color: #f2a900;
+      line-height: 1;
+    }
+
+    .traffic-label {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.8);
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .traffic-bar img {
+      width: 50px; /* Big, clear photos */
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #f2a900;
+    }
+
+    .traffic-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+    </style>
+</head>
+<body>
+
+<div class="traffic-bar">
+    <div class="traffic-item">
+        <img src="Sudhir Tiwari.jpg">
+        <div>
+            <span class="traffic-num" id="tc-today">0</span>
+            <span class="traffic-label">Today</span>
+        </div>
+    </div>
+
+    <div class="traffic-divider"></div>
+
+    <div class="traffic-item">
+        <div>
+            <span class="traffic-num" id="tc-week">0</span>
+            <span class="traffic-label">This Week</span>
+        </div>
+    </div>
+
+    <div class="traffic-divider"></div>
+
+    <div class="traffic-item">
+        <img src="0cf818f7-402a-4e59-ae2a-4f948995aef1.jfif">
+        <div>
+            <span class="traffic-num">
+                <a href="https://tinyurl.com/TDMumbai" target="_blank" style="color:#f2a900; text-decoration:none;">Tony Dcruz</a>
+            </span>
+            <span class="traffic-label">House Manager</span>
+        </div>
+    </div>
+
+    <div class="traffic-divider"></div>
+
+    <div class="traffic-item">
+        <span style="width:12px; height:12px; background:#4caf50; border-radius:50%; display:inline-block; animation: blink 2s infinite;"></span>
+        <span class="traffic-label" style="margin-left: 8px;">Live Visitor Counter</span>
+    </div>
+</div>
+
+</body>
+</html>
 }
 
 .traffic-item {
