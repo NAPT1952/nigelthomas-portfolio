@@ -60,8 +60,17 @@ footer{text-align:center;padding:28px;color:#999;font-size:.8em}
 
 
 /* TRAFFIC COUNTER */
-.traffic-bar{background:#111d4a;color:#fff;padding:12px 20px;text-align:center;border-bottom:4px solid #f2a900;font-family:'DM Sans',sans-serif}
-
+.traffic-bar {
+  background: #111d4a;
+  color: #fff;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  min-height: 50px;
+}
 .traffic-bar a{color:#f2a900;text-decoration:none;font-weight:600;font-size:0.85em}
 .traffic-bar a:hover{text-decoration:underline}
 .live-dot{width:8px;height:8px;border-radius:50%;background:#4caf50;display:inline-block;margin-right:6px;animation:blink 2s infinite;vertical-align:middle}
