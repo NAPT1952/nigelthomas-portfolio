@@ -68,16 +68,35 @@ footer{text-align:center;padding:28px;color:#999;font-size:.8em}
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 15px;
-  min-height: 50px;
+  gap: 20px;
+  min-height: 70px;
 }
-.traffic-bar a{color:#f2a900;text-decoration:none;font-weight:600;font-size:0.85em}
-.traffic-bar a:hover{text-decoration:underline}
-.live-dot{width:8px;height:8px;border-radius:50%;background:#4caf50;display:inline-block;margin-right:6px;animation:blink 2s infinite;vertical-align:middle}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-.traffic-label{font-size:0.75em;letter-spacing:1px;color:rgba(255,255,255,0.6);text-transform:uppercase}
-</style>
-</head>
+
+.traffic-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.traffic-num {
+  font-size: 1.5rem; /* This makes the counter numbers much larger */
+  font-weight: bold;
+  color: #f2a900;
+}
+
+.traffic-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+}
+
+.traffic-bar img {
+  width: 45px; /* Larger photos */
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f2a900;
+}
 <body>
 .traffic-bar {
 <div class="traffic-divider"></div>
