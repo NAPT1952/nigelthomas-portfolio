@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- Google Analytics 4 (replace G-XXXXXXXXXX with your Measurement ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google tag (gtag.js) - Your GA4 Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBCNTK4G63"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+        gtag('config', 'G-KBCNTK4G63');
     </script>
     
     <style>
@@ -227,7 +227,7 @@
             color: #f2a900;
         }
 
-        /* Live stats section - now set to ZERO for genuine starting point */
+        /* Live stats section - zero start */
         .live-stats {
             display: flex;
             justify-content: center;
@@ -243,7 +243,7 @@
         }
         
         .live-stats::before {
-            content: "📊 Tracking starts now · zero base";
+            content: "📊 Zero-based · GA4 active";
             position: absolute;
             top: -12px;
             left: 50%;
@@ -518,30 +518,30 @@
         <p style="text-align: right; font-style: italic; opacity:0.7; margin-top: 12px;">∞ infinite scroll</p>
     </section>
 
-    <!-- LIVE STATS SECTION - All counters set to ZERO (static, no JavaScript updates) -->
+    <!-- LIVE STATS SECTION - static zeros with GA active -->
     <div class="live-stats">
         <div class="stat-box">
-            <h2>0</h2>
+            <h2 id="visitors">0</h2>
             <p>🌍 Global Visitors</p>
-            <div class="stat-note">genuine count starts now</div>
+            <div class="stat-note">tracked via Google Analytics</div>
         </div>
         <div class="stat-box">
-            <h2>0</h2>
+            <h2 id="employers">0</h2>
             <p>🏢 Active Employers</p>
-            <div class="stat-note">real data from today</div>
+            <div class="stat-note">coming soon</div>
         </div>
         <div class="stat-box">
-            <h2>0</h2>
+            <h2 id="jobs">0</h2>
             <p>💼 Jobs Posted</p>
-            <div class="stat-note">fresh tracking begins</div>
+            <div class="stat-note">coming soon</div>
         </div>
     </div>
 
-    <!-- Explanation for genuine tracking (visible to visitors, but Google sees the zeros) -->
+    <!-- Note about live counter (you can uncomment the script below after setting up the API) -->
     <div style="background: #f0f4f8; padding: 20px; border-radius: 20px; margin: 20px 0; font-size: 14px; color: #333;">
-        <p><strong>📈 Genuine Visitor Tracking</strong><br>
-        These counters are set to <strong>0</strong> as a starting point. To display real numbers, a server‑side counter is required (e.g., using a database or a service like CountAPI). The current zeros are static HTML, so Google crawlers will index them as “0”.</p>
-        <p style="margin-top: 10px;">✅ Google Analytics is installed separately – you can view real visitor data in your GA4 dashboard. The numbers above will remain at 0 until you implement a dynamic counter that increments with each human visit (excluding bots).</p>
+        <p><strong>📈 Google Analytics Active</strong><br>
+        Your GA4 tag is installed and tracking visitors. You can view real‑time data in your GA4 dashboard.</p>
+        <p>✅ To display a live visitor counter on this page (instead of zeros), you need to create a serverless function on Vercel (as described in the previous guide). When it's ready, replace the static zeros with dynamic values using the script below (commented out).</p>
     </div>
 
     <!-- EMPLOYER GRID -->
@@ -586,6 +586,22 @@
     <p style="font-size:0.8rem; opacity:0.6;"><i class="fas fa-location-dot"></i> Mumbai · Bangalore · global network</p>
 </footer>
 
-<!-- No JavaScript counters – static zeros for genuine start -->
+<!-- Script for live counter – uncomment when your Vercel API is ready -->
+<!--
+<script>
+  async function updateVisitorCount() {
+    try {
+      const response = await fetch('/api/visitor-count');
+      const data = await response.json();
+      document.getElementById('visitors').innerText = data.count + '+';
+    } catch (error) {
+      console.error('Failed to fetch visitor count:', error);
+    }
+  }
+  updateVisitorCount();
+  setInterval(updateVisitorCount, 30000);
+</script>
+-->
+
 </body>
 </html>
