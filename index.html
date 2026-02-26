@@ -6,6 +6,16 @@
     <title>Nigel Anthony Thomas · Senior Hospitality Professional</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Analytics 4 (replace G-XXXXXXXXXX with your Measurement ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -217,7 +227,7 @@
             color: #f2a900;
         }
 
-        /* Live stats section */
+        /* Live stats section - now set to ZERO for genuine starting point */
         .live-stats {
             display: flex;
             justify-content: center;
@@ -228,6 +238,24 @@
             flex-wrap: wrap;
             border-radius: 40px;
             margin: 40px 0;
+            border: 2px dashed #f2a900;
+            position: relative;
+        }
+        
+        .live-stats::before {
+            content: "📊 Tracking starts now · zero base";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f2a900;
+            color: #0f1a3d;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 16px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
         }
 
         .stat-box h2 {
@@ -242,6 +270,13 @@
             font-size: 16px;
             color: #555;
             letter-spacing: 0.5px;
+        }
+        
+        .stat-note {
+            font-size: 12px;
+            color: #888;
+            margin-top: 4px;
+            font-style: italic;
         }
 
         /* HireSphere section */
@@ -375,6 +410,7 @@
             .stat-box h2 { font-size: 32px; }
             .section-title { font-size: 32px; }
             .cta-btn { width: 100%; text-align: center; }
+            .live-stats::before { font-size: 10px; white-space: normal; width: 90%; }
         }
         @media (max-width: 480px) {
             .image-grid { grid-template-columns: 1fr; }
@@ -385,7 +421,7 @@
 
 <header>
     <div class="container">
-        <!-- Profile image: using local profile.jpg with fallback -->
+        <!-- Profile image -->
         <img src="profile.jpg" 
              alt="Nigel Anthony Thomas" 
              class="profile-img"
@@ -393,13 +429,10 @@
         <h1>Nigel Anthony Thomas</h1>
         <p>Hospitality & F&B Operations Manager</p>
         <div class="keys-nav">
-            <!-- WhatsApp button with both icons -->
             <a href="https://wa.me/919769351231" class="key-btn"><i class="fab fa-whatsapp"></i> <i class="fas fa-mobile-alt"></i> +91 97693 51231</a>
-            <!-- Full email addresses -->
             <a href="mailto:napt1952@gmail.com" class="key-btn"><i class="far fa-envelope"></i> napt1952@gmail.com</a>
             <a href="mailto:restgenmgr1952@gmail.com" class="key-btn"><i class="far fa-envelope"></i> restgenmgr1952@gmail.com</a>
             <a href="https://www.linkedin.com/in/nathomas-hospitality" class="key-btn" target="_blank"><i class="fab fa-linkedin-in"></i> LINKEDIN</a>
-            <!-- Instagram button with correct URL -->
             <a href="https://www.instagram.com/restgenmgr/" class="key-btn" target="_blank"><i class="fab fa-instagram"></i> restgenmgr</a>
             <a href="https://www.facebook.com/FoodBeverageMgr/" class="key-btn" target="_blank"><i class="fab fa-facebook-f"></i> FACEBOOK</a>
             <a href="resume.pdf" download class="key-btn" target="_blank"><i class="fas fa-file-pdf"></i> DOWNLOAD CV</a>
@@ -485,20 +518,30 @@
         <p style="text-align: right; font-style: italic; opacity:0.7; margin-top: 12px;">∞ infinite scroll</p>
     </section>
 
-    <!-- LIVE STATS SECTION (updated with exact numbers) -->
+    <!-- LIVE STATS SECTION - All counters set to ZERO (static, no JavaScript updates) -->
     <div class="live-stats">
         <div class="stat-box">
-            <h2 id="visitors">341+</h2>
+            <h2>0</h2>
             <p>🌍 Global Visitors</p>
+            <div class="stat-note">genuine count starts now</div>
         </div>
         <div class="stat-box">
-            <h2 id="employers">38+</h2>
+            <h2>0</h2>
             <p>🏢 Active Employers</p>
+            <div class="stat-note">real data from today</div>
         </div>
         <div class="stat-box">
-            <h2 id="jobs">18+</h2>
+            <h2>0</h2>
             <p>💼 Jobs Posted</p>
+            <div class="stat-note">fresh tracking begins</div>
         </div>
+    </div>
+
+    <!-- Explanation for genuine tracking (visible to visitors, but Google sees the zeros) -->
+    <div style="background: #f0f4f8; padding: 20px; border-radius: 20px; margin: 20px 0; font-size: 14px; color: #333;">
+        <p><strong>📈 Genuine Visitor Tracking</strong><br>
+        These counters are set to <strong>0</strong> as a starting point. To display real numbers, a server‑side counter is required (e.g., using a database or a service like CountAPI). The current zeros are static HTML, so Google crawlers will index them as “0”.</p>
+        <p style="margin-top: 10px;">✅ Google Analytics is installed separately – you can view real visitor data in your GA4 dashboard. The numbers above will remain at 0 until you implement a dynamic counter that increments with each human visit (excluding bots).</p>
     </div>
 
     <!-- EMPLOYER GRID -->
@@ -543,41 +586,6 @@
     <p style="font-size:0.8rem; opacity:0.6;"><i class="fas fa-location-dot"></i> Mumbai · Bangalore · global network</p>
 </footer>
 
-<!-- Script for live stats counters (simulated real-time) -->
-<script>
-    function initCounter(id, startValue) {
-        let stored = localStorage.getItem(id);
-        let count = stored ? parseInt(stored) : startValue;
-
-        const element = document.getElementById(id);
-        element.innerText = count.toLocaleString() + "+";
-
-        function update() {
-            let increment = Math.floor(Math.random() * 3) + 1; // 1–3
-            count += increment;
-            localStorage.setItem(id, count);
-            element.innerText = count.toLocaleString() + "+";
-        }
-
-        function randomInterval() {
-            update();
-            let nextTime = Math.floor(Math.random() * 2000) + 3000;
-            setTimeout(randomInterval, nextTime);
-        }
-
-        setTimeout(randomInterval, 4000);
-    }
-
-    // Initialize counters with new exact start values
-    initCounter("visitors", 341);
-    initCounter("employers", 38);
-    initCounter("jobs", 18);
-</script>
-
-<!-- 
-    ✅ UPDATES:
-    - Instagram button now links to https://www.instagram.com/restgenmgr/
-    - All other sections remain as previously configured.
--->
+<!-- No JavaScript counters – static zeros for genuine start -->
 </body>
 </html>
