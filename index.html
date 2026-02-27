@@ -256,6 +256,17 @@
       color: white;
       font-weight: 500;
     }
+    /* Fallback for missing images */
+    .image-fallback {
+      width: 100%;
+      height: 200px;
+      background: #0f1a3d;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
     /* Work Experience */
     .experience-item {
       background: white;
@@ -322,9 +333,7 @@
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
-      padding: 2rem 1rem;
-      font-weight: bold;
-      font-size: 1.2rem;
+      padding: 1.5rem 1rem;
       transition: transform 0.3s;
     }
     .ad-item.sold {
@@ -335,9 +344,28 @@
       background: #0f1a3d;
       color: white;
       opacity: 0.9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
     }
     .ad-item:hover {
       transform: scale(1.02);
+    }
+    .ad-item.sold .ad-name {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .ad-item.sold .ad-detail {
+      font-size: 0.9rem;
+      margin: 0.2rem 0;
+      word-break: break-word;
+    }
+    .ad-item.sold .ad-detail i {
+      width: 20px;
+      margin-right: 5px;
     }
     /* Full BIO */
     .bio-text {
@@ -410,7 +438,7 @@
       <li><a href="#work">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#bio">Bio</a></li>
-      <li><a href="#advertising">Advertising</a></li>
+      <li><a href="#advertising">Advertise</a></li>
     </ul>
   </nav>
 
@@ -499,20 +527,20 @@
       </div>
     </section>
 
-    <!-- 3 SEA PICS -->
+    <!-- 3 SEA PICS with fallback for sea2.jpg if missing -->
     <section>
       <h2>Seascapes</h2>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="sea1.jpg" alt="Sea 1">
+          <img src="sea1.jpg" alt="Sea 1" onerror="this.onerror=null; this.parentNode.innerHTML+='<div class=\'image-fallback\'>Sea 1</div>'; this.style.display='none';">
           <div class="caption">Caribbean Cruise</div>
         </div>
         <div class="gallery-item">
-          <img src="sea2.jpg" alt="Sea 2">
+          <img src="sea2.jpg" alt="Sea 2" onerror="this.onerror=null; this.parentNode.innerHTML+='<div class=\'image-fallback\'>Sea 2</div>'; this.style.display='none';">
           <div class="caption">Bahamas Port</div>
         </div>
         <div class="gallery-item">
-          <img src="sea3.jpg" alt="Sea 3">
+          <img src="sea3.jpg" alt="Sea 3" onerror="this.onerror=null; this.parentNode.innerHTML+='<div class=\'image-fallback\'>Sea 3</div>'; this.style.display='none';">
           <div class="caption">Mediterranean Voyage</div>
         </div>
       </div>
@@ -608,24 +636,47 @@
       </div>
     </section>
 
-    <!-- ADVERTISING GRID – 12 slots with 4 sold -->
+    <!-- ADVERTISING GRID – 12 slots, 4 sold with contact details, 8 available @ Rs.99/month -->
     <section id="advertising">
-      <h2>Advertising Partners</h2>
+      <h2>Advertising Slots – Rs.99/month</h2>
       <div class="ad-grid">
-        <!-- Sold ads -->
-        <div class="ad-item sold">TONY</div>
-        <div class="ad-item sold">SUDHIR DAS</div>
-        <div class="ad-item sold">ST. MARYS</div>
-        <div class="ad-item sold">SOLD</div> <!-- Replace with fourth name if known -->
-        <!-- Available slots -->
-        <div class="ad-item available">AVAILABLE</div>
-        <div class="ad-item available">AVAILABLE</div>
-        <div class="ad-item available">AVAILABLE</div>
-        <div class="ad-item available">AVAILABLE</div>
-        <div class="ad-item available">AVAILABLE</div>
-        <div class="ad-item available">AVAILABLE</div>
-        <div class="ad-item available">AVAILABLE</div>
-        <div class="ad-item available">AVAILABLE</div>
+        <!-- Sold ad: Tony -->
+        <div class="ad-item sold">
+          <div class="ad-name">Tony</div>
+          <div class="ad-detail"><i class="fas fa-phone"></i> +91 98765 43210</div>
+          <div class="ad-detail"><i class="far fa-envelope"></i> tony@example.com</div>
+          <div class="ad-detail"><i class="fas fa-globe"></i> www.tony.com</div>
+        </div>
+        <!-- Sold ad: Sudhir Das -->
+        <div class="ad-item sold">
+          <div class="ad-name">Sudhir Das</div>
+          <div class="ad-detail"><i class="fas fa-phone"></i> +91 98765 43211</div>
+          <div class="ad-detail"><i class="far fa-envelope"></i> sudhir@example.com</div>
+          <div class="ad-detail"><i class="fas fa-globe"></i> www.sudhir.in</div>
+        </div>
+        <!-- Sold ad: St. Mary's -->
+        <div class="ad-item sold">
+          <div class="ad-name">St. Mary's</div>
+          <div class="ad-detail"><i class="fas fa-phone"></i> +91 98765 43212</div>
+          <div class="ad-detail"><i class="far fa-envelope"></i> info@stmarys.com</div>
+          <div class="ad-detail"><i class="fas fa-globe"></i> www.stmarys.org</div>
+        </div>
+        <!-- Sold ad: Fourth (placeholder) -->
+        <div class="ad-item sold">
+          <div class="ad-name">Partner</div>
+          <div class="ad-detail"><i class="fas fa-phone"></i> +91 98765 43213</div>
+          <div class="ad-detail"><i class="far fa-envelope"></i> contact@partner.com</div>
+          <div class="ad-detail"><i class="fas fa-globe"></i> www.partner.com</div>
+        </div>
+        <!-- 8 Available slots -->
+        <div class="ad-item available">AVAILABLE – Rs.99</div>
+        <div class="ad-item available">AVAILABLE – Rs.99</div>
+        <div class="ad-item available">AVAILABLE – Rs.99</div>
+        <div class="ad-item available">AVAILABLE – Rs.99</div>
+        <div class="ad-item available">AVAILABLE – Rs.99</div>
+        <div class="ad-item available">AVAILABLE – Rs.99</div>
+        <div class="ad-item available">AVAILABLE – Rs.99</div>
+        <div class="ad-item available">AVAILABLE – Rs.99</div>
       </div>
     </section>
   </main>
