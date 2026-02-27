@@ -309,41 +309,35 @@
       font-weight: bold;
       margin-right: 0.5rem;
     }
-    /* Portfolio 12 slots */
-    .portfolio-grid {
+    /* Advertising Grid - 12 slots */
+    .ad-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
       margin-top: 2rem;
     }
-    .portfolio-item {
+    .ad-item {
       background: white;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      position: relative;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: transform 0.3s;
     }
-    .portfolio-item img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-    .portfolio-item .info {
-      padding: 1rem;
-    }
-    .portfolio-item .info h4 {
-      color: #0f1a3d;
-      margin-bottom: 0.3rem;
-    }
-    .portfolio-item .customer-detail {
+    .ad-item.sold {
       background: #f2a900;
       color: #0f1a3d;
-      padding: 0.5rem;
-      font-size: 0.9rem;
-      font-weight: bold;
-      text-align: center;
-      border-radius: 4px;
-      margin-top: 0.5rem;
+    }
+    .ad-item.available {
+      background: #0f1a3d;
+      color: white;
+      opacity: 0.9;
+    }
+    .ad-item:hover {
+      transform: scale(1.02);
     }
     /* Full BIO */
     .bio-text {
@@ -371,7 +365,7 @@
         flex-direction: column;
         text-align: center;
       }
-      .portfolio-grid {
+      .ad-grid {
         grid-template-columns: repeat(2, 1fr);
       }
       .top-bar {
@@ -386,7 +380,7 @@
       }
     }
     @media (max-width: 480px) {
-      .portfolio-grid {
+      .ad-grid {
         grid-template-columns: 1fr;
       }
       .top-bar a span {
@@ -415,8 +409,8 @@
       <li><a href="#certificates">Certificates</a></li>
       <li><a href="#work">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#bio">Bio</a></li>
+      <li><a href="#advertising">Advertising</a></li>
     </ul>
   </nav>
 
@@ -444,7 +438,7 @@
       </div>
     </section>
 
-    <!-- 14 CERTIFICATES CAROUSEL (using c1.jpg to c14.jpg) -->
+    <!-- 14 CERTIFICATES CAROUSEL -->
     <section id="certificates">
       <h2>My Certifications</h2>
       <div class="carousel-container">
@@ -471,7 +465,7 @@
       </div>
     </section>
 
-    <!-- AWARD & ART GALLERY (award.jpg and art.jpg) -->
+    <!-- AWARD & ART GALLERY -->
     <section>
       <h2>Award & Art</h2>
       <div class="gallery-grid">
@@ -486,7 +480,7 @@
       </div>
     </section>
 
-    <!-- 3 LAND PICS (land1.jpg, land2.jpg, land3.jpg) -->
+    <!-- 3 LAND PICS -->
     <section>
       <h2>Landscapes</h2>
       <div class="gallery-grid">
@@ -505,7 +499,7 @@
       </div>
     </section>
 
-    <!-- 3 SEA PICS (sea1.jpg, sea2.jpg, sea3.jpg) -->
+    <!-- 3 SEA PICS -->
     <section>
       <h2>Seascapes</h2>
       <div class="gallery-grid">
@@ -604,37 +598,6 @@
       </div>
     </section>
 
-    <!-- 12 SLOTS PORTFOLIO (placeholders – replace with project images) -->
-    <section id="portfolio">
-      <h2>Featured Projects</h2>
-      <div class="portfolio-grid">
-        <!-- Slot 1 -->
-        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Resort Transformation</div><div class="info"><h4>Resort Transformation</h4><p>Nandi Hills</p></div></div>
-        <!-- Slot 2 -->
-        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Bakery Launch</div><div class="info"><h4>Bakery Launch</h4><p>Hyderabad</p></div></div>
-        <!-- Slot 3 (Customer Detail) -->
-        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Cafe Chain</div><div class="info"><h4>Cafe Chain</h4><p>Bangalore</p><div class="customer-detail">"Increased revenue by 20% – Client: Klayworks"</div></div></div>
-        <!-- Slot 4 -->
-        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Cruise Refurb</div><div class="info"><h4>Cruise Refurb</h4><p>Bahamas</p></div></div>
-        <!-- Slot 5 -->
-        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">F&B Overhaul</div><div class="info"><h4>F&B Overhaul</h4><p>Middle East</p></div></div>
-        <!-- Slot 6 (Customer Detail) -->
-        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Luxury Resort</div><div class="info"><h4>Luxury Resort</h4><p>Goa</p><div class="customer-detail">"Best guest satisfaction score – The Oberoi"</div></div></div>
-        <!-- Slot 7 -->
-        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Team Training</div><div class="info"><h4>Team Training</h4><p>Mumbai</p></div></div>
-        <!-- Slot 8 -->
-        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Cost Control</div><div class="info"><h4>Cost Control</h4><p>Delhi</p></div></div>
-        <!-- Slot 9 (Customer Detail) -->
-        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Pre-opening</div><div class="info"><h4>Pre-opening</h4><p>Chennai</p><div class="customer-detail">"Seamless launch – ITC Hotels"</div></div></div>
-        <!-- Slot 10 -->
-        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Menu Engineering</div><div class="info"><h4>Menu Engineering</h4><p>Pune</p></div></div>
-        <!-- Slot 11 -->
-        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Audit Compliance</div><div class="info"><h4>Audit Compliance</h4><p>Kolkata</p></div></div>
-        <!-- Slot 12 (Customer Detail) -->
-        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Staff Retention</div><div class="info"><h4>Staff Retention</h4><p>Hyderabad</p><div class="customer-detail">"Attrition dropped 25% – Taj Hotels"</div></div></div>
-      </div>
-    </section>
-
     <!-- FULL BIO -->
     <section id="bio">
       <h2>Full Biography</h2>
@@ -642,6 +605,27 @@
         <p><strong>Nigel Anthony Thomas</strong> is a seasoned hospitality executive with over 20 years of international experience across the full spectrum of the industry—from luxury resorts and fine-dining restaurants to high-volume cruise lines. His career began on the high seas, where he managed operations under strict USPH and ServSafe standards, honing his ability to deliver excellence in fast-paced, multicultural environments.</p>
         <p>Returning to land, Nigel took on General Manager roles at prestigious properties in India, including a resort at Nandi Hills and a patisserie in Hyderabad. He has consistently delivered double-digit improvements in profitability and guest satisfaction while reducing staff turnover through mentorship and internal promotions. His expertise spans P&L management, pre-opening projects, operational turnarounds, and building stable, high-performing teams.</p>
         <p>Recognized for his strategic vision and hands-on leadership, Nigel is passionate about creating unforgettable guest experiences and sustainable business growth. He holds certifications in FSSAI, HACCP, and ServSafe, and continues to develop his skills through international hospitality networks.</p>
+      </div>
+    </section>
+
+    <!-- ADVERTISING GRID – 12 slots with 4 sold -->
+    <section id="advertising">
+      <h2>Advertising Partners</h2>
+      <div class="ad-grid">
+        <!-- Sold ads -->
+        <div class="ad-item sold">TONY</div>
+        <div class="ad-item sold">SUDHIR DAS</div>
+        <div class="ad-item sold">ST. MARYS</div>
+        <div class="ad-item sold">SOLD</div> <!-- Replace with fourth name if known -->
+        <!-- Available slots -->
+        <div class="ad-item available">AVAILABLE</div>
+        <div class="ad-item available">AVAILABLE</div>
+        <div class="ad-item available">AVAILABLE</div>
+        <div class="ad-item available">AVAILABLE</div>
+        <div class="ad-item available">AVAILABLE</div>
+        <div class="ad-item available">AVAILABLE</div>
+        <div class="ad-item available">AVAILABLE</div>
+        <div class="ad-item available">AVAILABLE</div>
       </div>
     </section>
   </main>
