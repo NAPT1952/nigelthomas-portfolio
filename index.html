@@ -32,14 +32,27 @@
         }
 
         /* header */
-        header {
-            background: linear-gradient(145deg, #0f1a3d 0%, #1f2e5a 100%);
-            color: white;
-            padding: 40px 0 32px;
-            text-align: center;
-            border-bottom: 6px solid #f2a900;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-        }
+        <section style="height: 450px; width: 100%; position: relative; overflow: hidden;">
+  <a-scene embedded style="height: 450px; width: 100%;">
+    
+    <a-entity id="about-panel" position="0 1.6 -2.5">
+      <a-plane width="4.5" height="2.8" color="#0f1a3d" opacity="0.95" side="double"></a-plane>
+      
+      <a-text value="Nigel Anthony Thomas" align="center" position="0 1.1 0.05" width="5.5" color="#f2a900" font="kelsonsans"></a-text>
+      
+      <a-text 
+        value="General Manager | Resort & Hospitality Operations Leader\n\nI am a seasoned hospitality executive with over 20 years of experience turning operations into profitable, award-winning destinations. My career spans the globe—from international cruise lines to luxury resorts. I specialize in the critical intersection of financial discipline and people leadership. Let's build something exceptional." 
+        align="center" 
+        position="0 -0.2 0.05" 
+        width="3.8" 
+        wrap-count="45"
+        line-height="55">
+      </a-text>
+    </a-entity>
+
+    <a-sky color="#f4f7f6"></a-sky> 
+  </a-scene>
+</section>
         
         /* ----- Lattice Frame Style ----- */
         .lattice-frame {
