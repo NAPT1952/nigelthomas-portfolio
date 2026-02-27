@@ -256,17 +256,6 @@
       color: white;
       font-weight: 500;
     }
-    /* Fallback for missing images */
-    .image-fallback {
-      width: 100%;
-      height: 200px;
-      background: #0f1a3d;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
     /* Work Experience */
     .experience-item {
       background: white;
@@ -452,7 +441,8 @@
     <section id="home">
       <div class="hero">
         <div class="hero-image">
-          <img src="profile.jpg" alt="Nigel Thomas">
+          <!-- Updated profile picture filename -->
+          <img src="promie.jpg" alt="Nigel Thomas">
         </div>
         <div class="hero-content">
           <h1>Nigel Anthony Thomas</h1>
@@ -532,20 +522,20 @@
       </div>
     </section>
 
-    <!-- 3 SEA PICS with fallback for missing images -->
+    <!-- 3 SEA PICS – with correct file extensions (.jpeg for sea2 and sea3) -->
     <section>
       <h2>Seascapes</h2>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="sea1.jpg" alt="Sea 1" onerror="this.onerror=null; this.parentNode.innerHTML+='<div class=\'image-fallback\'>Sea 1</div>'; this.style.display='none';">
+          <img src="sea1.jpg" alt="Sea 1">
           <div class="caption">Caribbean Cruise</div>
         </div>
         <div class="gallery-item">
-          <img src="sea2.jpg" alt="Sea 2" onerror="this.onerror=null; this.parentNode.innerHTML+='<div class=\'image-fallback\'>Sea 2</div>'; this.style.display='none';">
+          <img src="sea2.jpeg" alt="Sea 2">
           <div class="caption">Bahamas Port</div>
         </div>
         <div class="gallery-item">
-          <img src="sea3.jpg" alt="Sea 3" onerror="this.onerror=null; this.parentNode.innerHTML+='<div class=\'image-fallback\'>Sea 3</div>'; this.style.display='none';">
+          <img src="sea3.jpeg" alt="Sea 3">
           <div class="caption">Mediterranean Voyage</div>
         </div>
       </div>
