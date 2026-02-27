@@ -124,6 +124,7 @@
       object-fit: cover;
       border: 5px solid #f2a900;
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      background: #ccc;
     }
     .hero-content {
       flex: 3 1 500px;
@@ -162,73 +163,6 @@
       font-size: 0.9rem;
       color: #666;
     }
-    /* Certificates Carousel */
-    .carousel-container {
-      position: relative;
-      margin: 2rem 0;
-    }
-    .carousel-wrapper {
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE/Edge */
-    }
-    .carousel-wrapper::-webkit-scrollbar {
-      display: none; /* Chrome/Safari */
-    }
-    .carousel-track {
-      display: flex;
-      gap: 1.5rem;
-      padding: 0.5rem 0;
-    }
-    .certificate-item {
-      flex: 0 0 180px;
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .certificate-item img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-      border-bottom: 2px solid #f2a900;
-    }
-    .certificate-item .caption {
-      padding: 0.5rem;
-      font-weight: 500;
-      background: #0f1a3d;
-      color: white;
-    }
-    .carousel-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #f2a900;
-      color: #0f1a3d;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 2;
-      transition: background 0.3s;
-    }
-    .carousel-arrow:hover {
-      background: #d18f00;
-    }
-    .carousel-arrow.left {
-      left: -20px;
-    }
-    .carousel-arrow.right {
-      right: -20px;
-    }
     /* Image Galleries */
     .gallery-grid {
       display: grid;
@@ -254,6 +188,17 @@
       background: #0f1a3d;
       color: white;
       font-weight: 500;
+    }
+    /* Fallback for missing images */
+    .image-placeholder {
+      width: 100%;
+      height: 200px;
+      background: #0f1a3d;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
     }
     /* Work Experience */
     .experience-item {
@@ -377,40 +322,27 @@
         gap: 1rem;
         padding: 0.5rem 1rem;
       }
-      .carousel-arrow.left {
-        left: 0;
-      }
-      .carousel-arrow.right {
-        right: 0;
-      }
     }
     @media (max-width: 480px) {
       .portfolio-grid {
         grid-template-columns: 1fr;
       }
       .top-bar a span {
-        display: none; /* hide text on very small screens, keep icons */
+        display: none;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Top bar with 7 buttons (updated with your contact info) -->
+  <!-- Top bar with 7 buttons -->
   <div class="top-bar">
-    <!-- Cel / Phone -->
     <a href="tel:+919769351231" title="Call"><i class="fas fa-phone"></i> <span>Cel</span></a>
-    <!-- WhatsApp -->
     <a href="https://wa.me/919769351231" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a>
-    <!-- Email (primary) -->
     <a href="mailto:nigelthomas.live@gmail.com" title="Email"><i class="far fa-envelope"></i> <span>Email</span></a>
-    <!-- LinkedIn -->
     <a href="https://linkedin.com/in/nathomas-hospitality" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i> <span>LinkedIn</span></a>
-    <!-- Facebook -->
     <a href="https://www.facebook.com/FoodBeverageMgr/" title="Facebook" target="_blank"><i class="fab fa-facebook"></i> <span>Facebook</span></a>
-    <!-- Instagram (no link provided, keep # for now) -->
     <a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i> <span>Instagram</span></a>
-    <!-- Download CV – replace "path/to/your-cv.pdf" with actual file path -->
-    <a href="path/to/your-cv.pdf" class="cv-button" download title="Download CV"><i class="fas fa-download"></i> <span>CV</span></a>
+    <a href="resume.pdf" class="cv-button" download title="Download CV"><i class="fas fa-download"></i> <span>CV</span></a>
   </div>
 
   <!-- Navigation -->
@@ -418,7 +350,6 @@
     <a href="#" class="logo">Nigel Thomas</a>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
-      <li><a href="#certificates">Certificates</a></li>
       <li><a href="#work">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
@@ -431,141 +362,79 @@
     <section id="home">
       <div class="hero">
         <div class="hero-image">
-          <!-- Replace with your actual profile picture -->
-          <img src="https://via.placeholder.com/250x250?text=Your+Photo" alt="Nigel Thomas">
+          <img src="profile.jpg" alt="Nigel Thomas">
         </div>
         <div class="hero-content">
           <h1>Nigel Anthony Thomas</h1>
           <div class="title">General Manager | Resort & Hospitality Operations Leader</div>
           <p style="margin-bottom: 1rem;">Senior hospitality executive with 20+ years of international experience across luxury resorts, hotels, cafes, multi-unit restaurants, and global cruise lines.</p>
-          <!-- 7 keys / metrics -->
           <div class="key-metrics">
-            <div class="metric-item">
-              <i class="fas fa-briefcase"></i>
-              <div class="number">20+</div>
-              <div class="label">Years Experience</div>
-            </div>
-            <div class="metric-item">
-              <i class="fas fa-globe"></i>
-              <div class="number">15+</div>
-              <div class="label">Countries</div>
-            </div>
-            <div class="metric-item">
-              <i class="fas fa-chart-line"></i>
-              <div class="number">15%</div>
-              <div class="label">Guest Sat. Increase</div>
-            </div>
-            <div class="metric-item">
-              <i class="fas fa-wallet"></i>
-              <div class="number">12%</div>
-              <div class="label">Cost Reduction</div>
-            </div>
-            <div class="metric-item">
-              <i class="fas fa-users"></i>
-              <div class="number">80+</div>
-              <div class="label">Team Size</div>
-            </div>
-            <div class="metric-item">
-              <i class="fas fa-trophy"></i>
-              <div class="number">20%</div>
-              <div class="label">Attrition Decrease</div>
-            </div>
-            <div class="metric-item">
-              <i class="fas fa-certificate"></i>
-              <div class="number">14</div>
-              <div class="label">Certifications</div>
-            </div>
+            <div class="metric-item"><i class="fas fa-briefcase"></i><div class="number">20+</div><div class="label">Years Experience</div></div>
+            <div class="metric-item"><i class="fas fa-globe"></i><div class="number">15+</div><div class="label">Countries</div></div>
+            <div class="metric-item"><i class="fas fa-chart-line"></i><div class="number">15%</div><div class="label">Guest Sat. Increase</div></div>
+            <div class="metric-item"><i class="fas fa-wallet"></i><div class="number">12%</div><div class="label">Cost Reduction</div></div>
+            <div class="metric-item"><i class="fas fa-users"></i><div class="number">80+</div><div class="label">Team Size</div></div>
+            <div class="metric-item"><i class="fas fa-trophy"></i><div class="number">20%</div><div class="label">Attrition Decrease</div></div>
+            <div class="metric-item"><i class="fas fa-certificate"></i><div class="number">14</div><div class="label">Certifications</div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 14 CERTIFICATES CAROUSEL -->
-    <section id="certificates">
-      <h2>My Certifications</h2>
-      <div class="carousel-container">
-        <div class="carousel-arrow left" onclick="document.querySelector('.carousel-wrapper').scrollBy({left: -300, behavior: 'smooth'})">&#10094;</div>
-        <div class="carousel-arrow right" onclick="document.querySelector('.carousel-wrapper').scrollBy({left: 300, behavior: 'smooth'})">&#10095;</div>
-        <div class="carousel-wrapper">
-          <div class="carousel-track">
-            <!-- 14 certificate items (replace images and captions) -->
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+1" alt="Cert 1"><div class="caption">FSSAI</div></div>
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+2" alt="Cert 2"><div class="caption">HACCP</div></div>
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+3" alt="Cert 3"><div class="caption">USPH</div></div>
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+4" alt="Cert 4"><div class="caption">ServSafe</div></div>
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+5" alt="Cert 5"><div class="caption">Leadership</div></div>
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+6" alt="Cert 6"><div class="caption">Food Safety</div></div>
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+7" alt="Cert 7"><div class="caption">Hygiene Audit</div></div>
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+8" alt="Cert 8"><div class="caption">Wine & Spirit</div></div>
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+9" alt="Cert 9"><div class="caption">Mixology</div></div>
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+10" alt="Cert 10"><div class="caption">First Aid</div></div>
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+11" alt="Cert 11"><div class="caption">Fire Safety</div></div>
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+12" alt="Cert 12"><div class="caption">Crisis Mgt</div></div>
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+13" alt="Cert 13"><div class="caption">Revenue Mgt</div></div>
-            <div class="certificate-item"><img src="https://via.placeholder.com/180x140?text=Cert+14" alt="Cert 14"><div class="caption">Customer Service</div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AWARD & ART GALLERY -->
+    <!-- AWARD & ART GALLERY – side by side with captions "Award" and "Art" -->
     <section>
       <h2>Award & Art</h2>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="https://via.placeholder.com/400x200?text=Award+1" alt="Award 1">
-          <div class="caption">Leadership Excellence Award</div>
+          <img src="award.jpg" alt="Award">
+          <div class="caption">Award</div>
         </div>
         <div class="gallery-item">
-          <img src="https://via.placeholder.com/400x200?text=Art+1" alt="Art 1">
-          <div class="caption">Hospitality Art Collection</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://via.placeholder.com/400x200?text=Award+2" alt="Award 2">
-          <div class="caption">Best General Manager 2024</div>
+          <img src="art1.jpg" alt="Art">
+          <div class="caption">Art</div>
         </div>
       </div>
     </section>
 
-    <!-- 3 LAND PICS -->
+    <!-- 3 LAND PICS (land1.jpg, land2.jpg, land3.jpg) -->
     <section>
       <h2>Landscapes</h2>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="https://via.placeholder.com/400x200?text=Land+1" alt="Land 1">
+          <img src="land1.jpg" alt="Land 1">
           <div class="caption">Nandi Hills Resort</div>
         </div>
         <div class="gallery-item">
-          <img src="https://via.placeholder.com/400x200?text=Land+2" alt="Land 2">
+          <img src="land2.jpg" alt="Land 2">
           <div class="caption">Hyderabad Bistro</div>
         </div>
         <div class="gallery-item">
-          <img src="https://via.placeholder.com/400x200?text=Land+3" alt="Land 3">
+          <img src="land3.jpg" alt="Land 3">
           <div class="caption">Bangalore Cafe</div>
         </div>
       </div>
     </section>
 
-    <!-- 3 SEA PICS -->
+    <!-- 3 SEA PICS (placeholders – replace with your own images) -->
     <section>
       <h2>Seascapes</h2>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="https://via.placeholder.com/400x200?text=Sea+1" alt="Sea 1">
+          <div class="image-placeholder">Caribbean Cruise</div>
           <div class="caption">Caribbean Cruise</div>
         </div>
         <div class="gallery-item">
-          <img src="https://via.placeholder.com/400x200?text=Sea+2" alt="Sea 2">
+          <div class="image-placeholder">Bahamas Port</div>
           <div class="caption">Bahamas Port</div>
         </div>
         <div class="gallery-item">
-          <img src="https://via.placeholder.com/400x200?text=Sea+3" alt="Sea 3">
+          <div class="image-placeholder">Mediterranean Voyage</div>
           <div class="caption">Mediterranean Voyage</div>
         </div>
       </div>
     </section>
 
-    <!-- WORK EXPERIENCE (detailed) -->
+    <!-- WORK EXPERIENCE -->
     <section id="work">
       <h2>Work Experience</h2>
       <div class="experience-item">
@@ -645,110 +514,22 @@
       </div>
     </section>
 
-    <!-- 12 SLOTS PORTFOLIO (with 4 customer details) -->
+    <!-- 12 SLOTS PORTFOLIO (placeholders – replace with project images) -->
     <section id="portfolio">
       <h2>Featured Projects</h2>
       <div class="portfolio-grid">
-        <!-- Slot 1 -->
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/400x150?text=Project+1" alt="Project 1">
-          <div class="info">
-            <h4>Resort Transformation</h4>
-            <p>Nandi Hills</p>
-          </div>
-        </div>
-        <!-- Slot 2 -->
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/400x150?text=Project+2" alt="Project 2">
-          <div class="info">
-            <h4>Bakery Launch</h4>
-            <p>Hyderabad</p>
-          </div>
-        </div>
-        <!-- Slot 3 (Customer Detail) -->
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/400x150?text=Project+3" alt="Project 3">
-          <div class="info">
-            <h4>Cafe Chain</h4>
-            <p>Bangalore</p>
-            <div class="customer-detail">"Increased revenue by 20% – Client: Klayworks"</div>
-          </div>
-        </div>
-        <!-- Slot 4 -->
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/400x150?text=Project+4" alt="Project 4">
-          <div class="info">
-            <h4>Cruise Refurb</h4>
-            <p>Bahamas</p>
-          </div>
-        </div>
-        <!-- Slot 5 -->
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/400x150?text=Project+5" alt="Project 5">
-          <div class="info">
-            <h4>F&B Overhaul</h4>
-            <p>Middle East</p>
-          </div>
-        </div>
-        <!-- Slot 6 (Customer Detail) -->
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/400x150?text=Project+6" alt="Project 6">
-          <div class="info">
-            <h4>Luxury Resort</h4>
-            <p>Goa</p>
-            <div class="customer-detail">"Best guest satisfaction score – The Oberoi"</div>
-          </div>
-        </div>
-        <!-- Slot 7 -->
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/400x150?text=Project+7" alt="Project 7">
-          <div class="info">
-            <h4>Team Training</h4>
-            <p>Mumbai</p>
-          </div>
-        </div>
-        <!-- Slot 8 -->
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/400x150?text=Project+8" alt="Project 8">
-          <div class="info">
-            <h4>Cost Control</h4>
-            <p>Delhi</p>
-          </div>
-        </div>
-        <!-- Slot 9 (Customer Detail) -->
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/400x150?text=Project+9" alt="Project 9">
-          <div class="info">
-            <h4>Pre-opening</h4>
-            <p>Chennai</p>
-            <div class="customer-detail">"Seamless launch – ITC Hotels"</div>
-          </div>
-        </div>
-        <!-- Slot 10 -->
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/400x150?text=Project+10" alt="Project 10">
-          <div class="info">
-            <h4>Menu Engineering</h4>
-            <p>Pune</p>
-          </div>
-        </div>
-        <!-- Slot 11 -->
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/400x150?text=Project+11" alt="Project 11">
-          <div class="info">
-            <h4>Audit Compliance</h4>
-            <p>Kolkata</p>
-          </div>
-        </div>
-        <!-- Slot 12 (Customer Detail) -->
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/400x150?text=Project+12" alt="Project 12">
-          <div class="info">
-            <h4>Staff Retention</h4>
-            <p>Hyderabad</p>
-            <div class="customer-detail">"Attrition dropped 25% – Taj Hotels"</div>
-          </div>
-        </div>
+        <div class="portfolio-item"><div class="image-placeholder">Resort Transformation</div><div class="info"><h4>Resort Transformation</h4><p>Nandi Hills</p></div></div>
+        <div class="portfolio-item"><div class="image-placeholder">Bakery Launch</div><div class="info"><h4>Bakery Launch</h4><p>Hyderabad</p></div></div>
+        <div class="portfolio-item"><div class="image-placeholder">Cafe Chain</div><div class="info"><h4>Cafe Chain</h4><p>Bangalore</p><div class="customer-detail">"Increased revenue by 20% – Client: Klayworks"</div></div></div>
+        <div class="portfolio-item"><div class="image-placeholder">Cruise Refurb</div><div class="info"><h4>Cruise Refurb</h4><p>Bahamas</p></div></div>
+        <div class="portfolio-item"><div class="image-placeholder">F&B Overhaul</div><div class="info"><h4>F&B Overhaul</h4><p>Middle East</p></div></div>
+        <div class="portfolio-item"><div class="image-placeholder">Luxury Resort</div><div class="info"><h4>Luxury Resort</h4><p>Goa</p><div class="customer-detail">"Best guest satisfaction score – The Oberoi"</div></div></div>
+        <div class="portfolio-item"><div class="image-placeholder">Team Training</div><div class="info"><h4>Team Training</h4><p>Mumbai</p></div></div>
+        <div class="portfolio-item"><div class="image-placeholder">Cost Control</div><div class="info"><h4>Cost Control</h4><p>Delhi</p></div></div>
+        <div class="portfolio-item"><div class="image-placeholder">Pre-opening</div><div class="info"><h4>Pre-opening</h4><p>Chennai</p><div class="customer-detail">"Seamless launch – ITC Hotels"</div></div></div>
+        <div class="portfolio-item"><div class="image-placeholder">Menu Engineering</div><div class="info"><h4>Menu Engineering</h4><p>Pune</p></div></div>
+        <div class="portfolio-item"><div class="image-placeholder">Audit Compliance</div><div class="info"><h4>Audit Compliance</h4><p>Kolkata</p></div></div>
+        <div class="portfolio-item"><div class="image-placeholder">Staff Retention</div><div class="info"><h4>Staff Retention</h4><p>Hyderabad</p><div class="customer-detail">"Attrition dropped 25% – Taj Hotels"</div></div></div>
       </div>
     </section>
 
@@ -763,7 +544,7 @@
     </section>
   </main>
 
-  <!-- FOOTER (updated with primary email) -->
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2026 Nigel Anthony Thomas. All rights reserved.</p>
     <p>Email: <a href="mailto:nigelthomas.live@gmail.com">nigelthomas.live@gmail.com</a> | LinkedIn: <a href="https://linkedin.com/in/nathomas-hospitality" target="_blank">nathomas-hospitality</a></p>
