@@ -163,6 +163,73 @@
       font-size: 0.9rem;
       color: #666;
     }
+    /* Certificates Carousel */
+    .carousel-container {
+      position: relative;
+      margin: 2rem 0;
+    }
+    .carousel-wrapper {
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .carousel-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel-track {
+      display: flex;
+      gap: 1.5rem;
+      padding: 0.5rem 0;
+    }
+    .certificate-item {
+      flex: 0 0 180px;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .certificate-item img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-bottom: 2px solid #f2a900;
+    }
+    .certificate-item .caption {
+      padding: 0.5rem;
+      font-weight: 500;
+      background: #0f1a3d;
+      color: white;
+    }
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #f2a900;
+      color: #0f1a3d;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 2;
+      transition: background 0.3s;
+    }
+    .carousel-arrow:hover {
+      background: #d18f00;
+    }
+    .carousel-arrow.left {
+      left: -20px;
+    }
+    .carousel-arrow.right {
+      right: -20px;
+    }
     /* Image Galleries */
     .gallery-grid {
       display: grid;
@@ -311,6 +378,12 @@
         gap: 1rem;
         padding: 0.5rem 1rem;
       }
+      .carousel-arrow.left {
+        left: 0;
+      }
+      .carousel-arrow.right {
+        right: 0;
+      }
     }
     @media (max-width: 480px) {
       .portfolio-grid {
@@ -339,6 +412,7 @@
     <a href="#" class="logo">Nigel Thomas</a>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
+      <li><a href="#certificates">Certificates</a></li>
       <li><a href="#work">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
@@ -370,7 +444,34 @@
       </div>
     </section>
 
-    <!-- AWARD & ART GALLERY – using award.jpg and art.jpg -->
+    <!-- 14 CERTIFICATES CAROUSEL (using c1.jpg to c14.jpg) -->
+    <section id="certificates">
+      <h2>My Certifications</h2>
+      <div class="carousel-container">
+        <div class="carousel-arrow left" onclick="document.querySelector('.carousel-wrapper').scrollBy({left: -300, behavior: 'smooth'})">&#10094;</div>
+        <div class="carousel-arrow right" onclick="document.querySelector('.carousel-wrapper').scrollBy({left: 300, behavior: 'smooth'})">&#10095;</div>
+        <div class="carousel-wrapper">
+          <div class="carousel-track">
+            <div class="certificate-item"><img src="c1.jpg" alt="Certificate 1"><div class="caption">FSSAI</div></div>
+            <div class="certificate-item"><img src="c2.jpg" alt="Certificate 2"><div class="caption">HACCP</div></div>
+            <div class="certificate-item"><img src="c3.jpg" alt="Certificate 3"><div class="caption">USPH</div></div>
+            <div class="certificate-item"><img src="c4.jpg" alt="Certificate 4"><div class="caption">ServSafe</div></div>
+            <div class="certificate-item"><img src="c5.jpg" alt="Certificate 5"><div class="caption">Leadership</div></div>
+            <div class="certificate-item"><img src="c6.jpg" alt="Certificate 6"><div class="caption">Food Safety</div></div>
+            <div class="certificate-item"><img src="c7.jpg" alt="Certificate 7"><div class="caption">Hygiene Audit</div></div>
+            <div class="certificate-item"><img src="c8.jpg" alt="Certificate 8"><div class="caption">Wine & Spirit</div></div>
+            <div class="certificate-item"><img src="c9.jpg" alt="Certificate 9"><div class="caption">Mixology</div></div>
+            <div class="certificate-item"><img src="c10.jpg" alt="Certificate 10"><div class="caption">First Aid</div></div>
+            <div class="certificate-item"><img src="c11.jpg" alt="Certificate 11"><div class="caption">Fire Safety</div></div>
+            <div class="certificate-item"><img src="c12.jpg" alt="Certificate 12"><div class="caption">Crisis Mgt</div></div>
+            <div class="certificate-item"><img src="c13.jpg" alt="Certificate 13"><div class="caption">Revenue Mgt</div></div>
+            <div class="certificate-item"><img src="c14.jpg" alt="Certificate 14"><div class="caption">Customer Service</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARD & ART GALLERY (award.jpg and art.jpg) -->
     <section>
       <h2>Award & Art</h2>
       <div class="gallery-grid">
@@ -385,7 +486,7 @@
       </div>
     </section>
 
-    <!-- 3 LAND PICS – using land1.jpg, land2.jpg, land3.jpg -->
+    <!-- 3 LAND PICS (land1.jpg, land2.jpg, land3.jpg) -->
     <section>
       <h2>Landscapes</h2>
       <div class="gallery-grid">
@@ -404,7 +505,7 @@
       </div>
     </section>
 
-    <!-- 3 SEA PICS – now using sea1.jpg, sea2.jpg, sea3.jpg -->
+    <!-- 3 SEA PICS (sea1.jpg, sea2.jpg, sea3.jpg) -->
     <section>
       <h2>Seascapes</h2>
       <div class="gallery-grid">
@@ -507,18 +608,29 @@
     <section id="portfolio">
       <h2>Featured Projects</h2>
       <div class="portfolio-grid">
-        <!-- For each portfolio item, we keep the placeholder text; you can replace with actual images later -->
+        <!-- Slot 1 -->
         <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Resort Transformation</div><div class="info"><h4>Resort Transformation</h4><p>Nandi Hills</p></div></div>
+        <!-- Slot 2 -->
         <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Bakery Launch</div><div class="info"><h4>Bakery Launch</h4><p>Hyderabad</p></div></div>
+        <!-- Slot 3 (Customer Detail) -->
         <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Cafe Chain</div><div class="info"><h4>Cafe Chain</h4><p>Bangalore</p><div class="customer-detail">"Increased revenue by 20% – Client: Klayworks"</div></div></div>
+        <!-- Slot 4 -->
         <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Cruise Refurb</div><div class="info"><h4>Cruise Refurb</h4><p>Bahamas</p></div></div>
+        <!-- Slot 5 -->
         <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">F&B Overhaul</div><div class="info"><h4>F&B Overhaul</h4><p>Middle East</p></div></div>
+        <!-- Slot 6 (Customer Detail) -->
         <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Luxury Resort</div><div class="info"><h4>Luxury Resort</h4><p>Goa</p><div class="customer-detail">"Best guest satisfaction score – The Oberoi"</div></div></div>
+        <!-- Slot 7 -->
         <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Team Training</div><div class="info"><h4>Team Training</h4><p>Mumbai</p></div></div>
+        <!-- Slot 8 -->
         <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Cost Control</div><div class="info"><h4>Cost Control</h4><p>Delhi</p></div></div>
+        <!-- Slot 9 (Customer Detail) -->
         <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Pre-opening</div><div class="info"><h4>Pre-opening</h4><p>Chennai</p><div class="customer-detail">"Seamless launch – ITC Hotels"</div></div></div>
+        <!-- Slot 10 -->
         <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Menu Engineering</div><div class="info"><h4>Menu Engineering</h4><p>Pune</p></div></div>
+        <!-- Slot 11 -->
         <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Audit Compliance</div><div class="info"><h4>Audit Compliance</h4><p>Kolkata</p></div></div>
+        <!-- Slot 12 (Customer Detail) -->
         <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Staff Retention</div><div class="info"><h4>Staff Retention</h4><p>Hyderabad</p><div class="customer-detail">"Attrition dropped 25% – Taj Hotels"</div></div></div>
       </div>
     </section>
