@@ -189,17 +189,6 @@
       color: white;
       font-weight: 500;
     }
-    /* Fallback for missing images */
-    .image-placeholder {
-      width: 100%;
-      height: 200px;
-      background: #0f1a3d;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
     /* Work Experience */
     .experience-item {
       background: white;
@@ -381,7 +370,7 @@
       </div>
     </section>
 
-    <!-- AWARD & ART GALLERY – side by side with captions "Award" and "Art" -->
+    <!-- AWARD & ART GALLERY – using award.jpg and art.jpg -->
     <section>
       <h2>Award & Art</h2>
       <div class="gallery-grid">
@@ -390,13 +379,13 @@
           <div class="caption">Award</div>
         </div>
         <div class="gallery-item">
-          <img src="art1.jpg" alt="Art">
+          <img src="art.jpg" alt="Art">
           <div class="caption">Art</div>
         </div>
       </div>
     </section>
 
-    <!-- 3 LAND PICS (land1.jpg, land2.jpg, land3.jpg) -->
+    <!-- 3 LAND PICS – using land1.jpg, land2.jpg, land3.jpg -->
     <section>
       <h2>Landscapes</h2>
       <div class="gallery-grid">
@@ -415,20 +404,20 @@
       </div>
     </section>
 
-    <!-- 3 SEA PICS (placeholders – replace with your own images) -->
+    <!-- 3 SEA PICS – now using sea1.jpg, sea2.jpg, sea3.jpg -->
     <section>
       <h2>Seascapes</h2>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <div class="image-placeholder">Caribbean Cruise</div>
+          <img src="sea1.jpg" alt="Sea 1">
           <div class="caption">Caribbean Cruise</div>
         </div>
         <div class="gallery-item">
-          <div class="image-placeholder">Bahamas Port</div>
+          <img src="sea2.jpg" alt="Sea 2">
           <div class="caption">Bahamas Port</div>
         </div>
         <div class="gallery-item">
-          <div class="image-placeholder">Mediterranean Voyage</div>
+          <img src="sea3.jpg" alt="Sea 3">
           <div class="caption">Mediterranean Voyage</div>
         </div>
       </div>
@@ -518,18 +507,19 @@
     <section id="portfolio">
       <h2>Featured Projects</h2>
       <div class="portfolio-grid">
-        <div class="portfolio-item"><div class="image-placeholder">Resort Transformation</div><div class="info"><h4>Resort Transformation</h4><p>Nandi Hills</p></div></div>
-        <div class="portfolio-item"><div class="image-placeholder">Bakery Launch</div><div class="info"><h4>Bakery Launch</h4><p>Hyderabad</p></div></div>
-        <div class="portfolio-item"><div class="image-placeholder">Cafe Chain</div><div class="info"><h4>Cafe Chain</h4><p>Bangalore</p><div class="customer-detail">"Increased revenue by 20% – Client: Klayworks"</div></div></div>
-        <div class="portfolio-item"><div class="image-placeholder">Cruise Refurb</div><div class="info"><h4>Cruise Refurb</h4><p>Bahamas</p></div></div>
-        <div class="portfolio-item"><div class="image-placeholder">F&B Overhaul</div><div class="info"><h4>F&B Overhaul</h4><p>Middle East</p></div></div>
-        <div class="portfolio-item"><div class="image-placeholder">Luxury Resort</div><div class="info"><h4>Luxury Resort</h4><p>Goa</p><div class="customer-detail">"Best guest satisfaction score – The Oberoi"</div></div></div>
-        <div class="portfolio-item"><div class="image-placeholder">Team Training</div><div class="info"><h4>Team Training</h4><p>Mumbai</p></div></div>
-        <div class="portfolio-item"><div class="image-placeholder">Cost Control</div><div class="info"><h4>Cost Control</h4><p>Delhi</p></div></div>
-        <div class="portfolio-item"><div class="image-placeholder">Pre-opening</div><div class="info"><h4>Pre-opening</h4><p>Chennai</p><div class="customer-detail">"Seamless launch – ITC Hotels"</div></div></div>
-        <div class="portfolio-item"><div class="image-placeholder">Menu Engineering</div><div class="info"><h4>Menu Engineering</h4><p>Pune</p></div></div>
-        <div class="portfolio-item"><div class="image-placeholder">Audit Compliance</div><div class="info"><h4>Audit Compliance</h4><p>Kolkata</p></div></div>
-        <div class="portfolio-item"><div class="image-placeholder">Staff Retention</div><div class="info"><h4>Staff Retention</h4><p>Hyderabad</p><div class="customer-detail">"Attrition dropped 25% – Taj Hotels"</div></div></div>
+        <!-- For each portfolio item, we keep the placeholder text; you can replace with actual images later -->
+        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Resort Transformation</div><div class="info"><h4>Resort Transformation</h4><p>Nandi Hills</p></div></div>
+        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Bakery Launch</div><div class="info"><h4>Bakery Launch</h4><p>Hyderabad</p></div></div>
+        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Cafe Chain</div><div class="info"><h4>Cafe Chain</h4><p>Bangalore</p><div class="customer-detail">"Increased revenue by 20% – Client: Klayworks"</div></div></div>
+        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Cruise Refurb</div><div class="info"><h4>Cruise Refurb</h4><p>Bahamas</p></div></div>
+        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">F&B Overhaul</div><div class="info"><h4>F&B Overhaul</h4><p>Middle East</p></div></div>
+        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Luxury Resort</div><div class="info"><h4>Luxury Resort</h4><p>Goa</p><div class="customer-detail">"Best guest satisfaction score – The Oberoi"</div></div></div>
+        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Team Training</div><div class="info"><h4>Team Training</h4><p>Mumbai</p></div></div>
+        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Cost Control</div><div class="info"><h4>Cost Control</h4><p>Delhi</p></div></div>
+        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Pre-opening</div><div class="info"><h4>Pre-opening</h4><p>Chennai</p><div class="customer-detail">"Seamless launch – ITC Hotels"</div></div></div>
+        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Menu Engineering</div><div class="info"><h4>Menu Engineering</h4><p>Pune</p></div></div>
+        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Audit Compliance</div><div class="info"><h4>Audit Compliance</h4><p>Kolkata</p></div></div>
+        <div class="portfolio-item"><div style="width:100%; height:150px; background:#0f1a3d; color:white; display:flex; align-items:center; justify-content:center;">Staff Retention</div><div class="info"><h4>Staff Retention</h4><p>Hyderabad</p><div class="customer-detail">"Attrition dropped 25% – Taj Hotels"</div></div></div>
       </div>
     </section>
 
