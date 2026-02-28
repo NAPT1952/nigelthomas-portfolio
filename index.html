@@ -65,6 +65,7 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      position: relative; /* Added for absolute positioning of counter */
     }
     .logo {
       color: #f2a900;
@@ -86,6 +87,67 @@
     .nav-links a:hover {
       color: #f2a900;
     }
+
+    /* Visitor counter styling */
+    .visitor-counter {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      font-size: 0.8rem;
+      color: #ecf0f1;
+      background: transparent;
+      white-space: nowrap;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .visitor-counter a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Subtle "powered by" link */
+    .visitor-counter a[href*="free-counters.org"] {
+      font-size: 0.6rem;
+      opacity: 0.5;
+      margin-right: 4px;
+    }
+    .visitor-counter a[href*="free-counters.org"]:hover {
+      opacity: 1;
+    }
+    /* Hide the line break inserted by the script */
+    .visitor-counter br {
+      display: none;
+    }
+    /* Style the counter image */
+    .visitor-counter img {
+      display: inline-block;
+      vertical-align: middle;
+      border: none;
+      filter: brightness(0.9);
+      max-height: 20px;
+      width: auto;
+    }
+    /* Adjust for mobile */
+    @media (max-width: 768px) {
+      .visitor-counter {
+        position: static;
+        transform: none;
+        margin-top: 8px;
+        justify-content: center;
+        white-space: normal;
+      }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
+
     /* Sections */
     section {
       padding: 4rem 0;
@@ -433,7 +495,7 @@
     <a href="resume.pdf" class="cv-button" download title="Download CV"><i class="fas fa-download"></i> <span>CV</span></a>
   </div>
 
-  <!-- Navigation -->
+  <!-- Navigation with visitor counter -->
   <nav>
     <a href="#" class="logo">Nigel Thomas</a>
     <ul class="nav-links">
@@ -444,6 +506,12 @@
       <li><a href="#bio">Bio</a></li>
       <li><a href="#advertising">Advertise</a></li>
     </ul>
+    <!-- Visitor counter inserted here -->
+    <div class="visitor-counter">
+      <a href='https://www.free-counters.org/'>powered by Free-Counters</a>
+      <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=fb4f9656aa17efba252d981c4ade0a62f98f32d8'></script>
+      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1509697/t/5"></script>
+    </div>
   </nav>
 
   <main class="container">
